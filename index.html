@@ -6,6 +6,9 @@
   <link rel="manifest" href="manifest.json">
   <link rel="icon" href="logo-seyed.png" type="image/png">
   <meta name="theme-color" content="#0078d4">
+  <meta name="description" content="مرجع جامع ابزارهای هوش مصنوعی با دسته‌بندی‌های کاربردی و لینک‌های مستقیم به بهترین سرویس‌ها.">
+  <meta name="keywords" content="هوش مصنوعی, چت‌بات, تولید متن, تصویرسازی, ابزارهای AI, دکتر سید قیامی">
+  <meta name="author" content="Dr. Seyed Ghayami">
   <link href="https://cdn.jsdelivr.net/gh/rastikerdar/vazir-font@v30.1.0/dist/font-face.css" rel="stylesheet" type="text/css" />
   <style>
     body {
@@ -14,6 +17,7 @@
       color: #333;
       direction: rtl;
       padding: 20px;
+      transition: background-color 0.3s, color 0.3s;
     }
     header {
       text-align: center;
@@ -23,6 +27,15 @@
       width: 100px;
       border-radius: 12px;
       margin-bottom: 10px;
+    }
+    #toggle-theme {
+      margin-top: 10px;
+      padding: 6px 12px;
+      border: none;
+      border-radius: 6px;
+      background-color: #444;
+      color: white;
+      cursor: pointer;
     }
     nav ul {
       display: flex;
@@ -61,6 +74,23 @@
       padding: 20px;
       border-radius: 12px;
     }
+
+    /* حالت شب */
+    body.dark-mode {
+      background-color: #1e1e1e;
+      color: #ddd;
+    }
+    body.dark-mode nav ul li a {
+      background-color: #444;
+      color: #fff;
+    }
+    body.dark-mode section h2 {
+      color: #66aaff;
+    }
+    body.dark-mode footer {
+      background-color: #2c2c2c;
+      color: #ccc;
+    }
   </style>
 </head>
 <body>
@@ -68,6 +98,7 @@
     <img src="logo-seyed.png" alt="لوگوی دکتر سیدمجتبی قیامی">
     <h1>🎯 مرجع ابزارهای هوش مصنوعی</h1>
     <p>دسته‌بندی‌شده، کاربردی، و همیشه در حال رشد</p>
+    <button id="toggle-theme">🌙 تغییر حالت شب/روز</button>
   </header>
 
   <nav>
@@ -113,11 +144,65 @@
     </ul>
   </section>
 
-  <!-- ادامه دسته‌ها رو می‌تونی همین‌طور اضافه کنی -->
+  <section id="video">
+    <h2>🎬 ویدیو</h2>
+    <ul>
+      <li><a href="https://runwayml.com">Runway</a></li>
+      <li><a href="https://pika.art">Pika</a></li>
+      <li><a href="https://synthesia.io">Synthesia</a></li>
+    </ul>
+  </section>
+
+  <section id="music">
+    <h2>🎵 موسیقی</h2>
+    <ul>
+      <li><a href="https://soundraw.io">Soundraw</a></li>
+      <li><a href="https://aiva.ai">AIVA</a></li>
+      <li><a href="https://boomy.com">Boomy</a></li>
+    </ul>
+  </section>
+
+  <section id="education">
+    <h2>📚 آموزش</h2>
+    <ul>
+      <li><a href="https://khanacademy.org">Khan Academy</a></li>
+      <li><a href="https://coursera.org">Coursera</a></li>
+      <li><a href="https://edx.org">edX</a></li>
+    </ul>
+  </section>
+
+  <section id="code">
+    <h2>💻 کدنویسی</h2>
+    <ul>
+      <li><a href="https://replit.com">Replit</a></li>
+      <li><a href="https://github.com/features/copilot">GitHub Copilot</a></li>
+      <li><a href="https://codeium.com">Codeium</a></li>
+    </ul>
+  </section>
+
+  <section id="marketing">
+    <h2>📈 مارکتینگ</h2>
+    <ul>
+      <li><a href="https://neural.love">Neural.love</a></li>
+      <li><a href="https://adcreative.ai">AdCreative.ai</a></li>
+      <li><a href="https://copy.ai">Copy.ai</a></li>
+    </ul>
+  </section>
+
+  <section id="science">
+    <h2>🔬 تخصصی</h2>
+    <ul>
+      <li><a href="https://scite.ai">Scite</a></li>
+      <li><a href="https://elicit.org">Elicit</a></li>
+      <li><a href="https://consensus.app">Consensus</a></li>
+    </ul>
+  </section>
 
   <footer>
     <p><strong>ساخته شده توسط دکتر سیدمجتبی قیامی</strong> | 📞 <a href="tel:09154353956">09154353956</a></p>
     <p>🌐 <a href="https://spootter1395-max.github.io/ai-hub">spootter1395-max.github.io/ai-hub</a></p>
   </footer>
-</body>
-</html>
+
+  <script>
+    const toggleBtn = document.getElementById('toggle-theme');
+    toggleBtn.addEventListener('click', ()
