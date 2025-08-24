@@ -4,11 +4,60 @@
   <meta charset="UTF-8">
   <title>مرجع ابزارهای هوش مصنوعی</title>
   <link rel="stylesheet" href="style.css">
+  <link href="https://cdn.jsdelivr.net/gh/rastikerdar/vazir-font@v30.1.0/dist/font-face.css" rel="stylesheet" type="text/css" />
+  <style>
+    body {
+      font-family: 'Vazir', sans-serif;
+      background-color: #f0f0f0;
+      color: #333;
+      direction: rtl;
+      padding: 20px;
+    }
+    header {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+    nav ul {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      list-style: none;
+      justify-content: center;
+      padding: 0;
+    }
+    nav ul li a {
+      background-color: #0078d4;
+      color: white;
+      padding: 8px 12px;
+      border-radius: 6px;
+      text-decoration: none;
+    }
+    section {
+      margin-top: 40px;
+    }
+    section h2 {
+      color: #0078d4;
+    }
+    section ul {
+      list-style: none;
+      padding: 0;
+    }
+    section ul li {
+      margin: 5px 0;
+    }
+    footer {
+      text-align: center;
+      margin-top: 50px;
+      font-size: 1.1em;
+      color: #444;
+      font-family: 'Vazir', sans-serif;
+    }
+  </style>
 </head>
 <body>
   <header>
-    <h1>🎯 ابزارهای هوش مصنوعی</h1>
-    <p>دسته‌بندی‌شده و قابل گسترش</p>
+    <h1>🎯 مرجع ابزارهای هوش مصنوعی</h1>
+    <p>دسته‌بندی‌شده، کاربردی، و همیشه در حال رشد</p>
   </header>
 
   <nav>
@@ -16,7 +65,12 @@
       <li><a href="#chatbots">چت‌بات‌ها</a></li>
       <li><a href="#text">تولید متن</a></li>
       <li><a href="#image">تصویرسازی</a></li>
-      <!-- ادامه دسته‌ها -->
+      <li><a href="#video">ویدیو</a></li>
+      <li><a href="#music">موسیقی</a></li>
+      <li><a href="#education">آموزش</a></li>
+      <li><a href="#code">کدنویسی</a></li>
+      <li><a href="#marketing">مارکتینگ</a></li>
+      <li><a href="#science">تخصصی</a></li>
     </ul>
   </nav>
 
@@ -25,14 +79,97 @@
     <ul>
       <li><a href="https://chat.openai.com">ChatGPT</a></li>
       <li><a href="https://copilot.microsoft.com">Copilot</a></li>
-      <!-- ابزارهای بیشتر -->
+      <li><a href="https://claude.ai">Claude</a></li>
+      <li><a href="https://gemini.google.com">Gemini</a></li>
+      <li><a href="https://pi.ai">Pi.ai</a></li>
+      <li><a href="https://character.ai">Character.ai</a></li>
+      <li><a href="https://poe.com">Poe</a></li>
+      <li><a href="https://you.com/chat">YouChat</a></li>
     </ul>
   </section>
 
-  <!-- ادامه‌ی دسته‌ها مشابه همین ساختار -->
+  <section id="text">
+    <h2>✍️ تولید متن</h2>
+    <ul>
+      <li><a href="https://jasper.ai">Jasper</a></li>
+      <li><a href="https://copy.ai">Copy.ai</a></li>
+      <li><a href="https://writesonic.com">Writesonic</a></li>
+      <li><a href="https://rytr.me">Rytr</a></li>
+      <li><a href="https://anyword.com">Anyword</a></li>
+      <li><a href="https://sudowrite.com">Sudowrite</a></li>
+    </ul>
+  </section>
 
-  <footer>
-    <p>ساخته شده با ❤️ توسط سید</p>
-  </footer>
-</body>
-</html>
+  <section id="image">
+    <h2>🎨 تصویرسازی</h2>
+    <ul>
+      <li><a href="https://openai.com/dall-e">DALL·E</a></li>
+      <li><a href="https://midjourney.com">Midjourney</a></li>
+      <li><a href="https://leonardo.ai">Leonardo</a></li>
+      <li><a href="https://stablediffusionweb.com">Stable Diffusion</a></li>
+      <li><a href="https://runwayml.com">Runway ML</a></li>
+      <li><a href="https://firefly.adobe.com">Adobe Firefly</a></li>
+    </ul>
+  </section>
+
+  <section id="video">
+    <h2>🎬 ویدیو</h2>
+    <ul>
+      <li><a href="https://pictory.ai">Pictory</a></li>
+      <li><a href="https://synthesia.io">Synthesia</a></li>
+      <li><a href="https://lumen5.com">Lumen5</a></li>
+      <li><a href="https://descript.com">Descript</a></li>
+      <li><a href="https://kaiber.ai">Kaiber</a></li>
+      <li><a href="https://fliki.ai">Fliki</a></li>
+    </ul>
+  </section>
+
+  <section id="music">
+    <h2>🎵 موسیقی و صدا</h2>
+    <ul>
+      <li><a href="https://soundraw.io">Soundraw</a></li>
+      <li><a href="https://aiva.ai">AIVA</a></li>
+      <li><a href="https://voicemod.net">Voicemod</a></li>
+      <li><a href="https://elevenlabs.io">ElevenLabs</a></li>
+      <li><a href="https://boomy.com">Boomy</a></li>
+      <li><a href="https://lalal.ai">LALAL.AI</a></li>
+    </ul>
+  </section>
+
+  <section id="education">
+    <h2>📚 آموزش و یادگیری</h2>
+    <ul>
+      <li><a href="https://khanacademy.org/khanmigo">Khanmigo</a></li>
+      <li><a href="https://quizgecko.com">Quizgecko</a></li>
+      <li><a href="https://tutorai.me">TutorAI</a></li>
+      <li><a href="https://socratic.org">Socratic</a></li>
+      <li><a href="https://explainpaper.com">Explainpaper</a></li>
+    </ul>
+  </section>
+
+  <section id="code">
+    <h2>📈 کدنویسی و تحلیل داده</h2>
+    <ul>
+      <li><a href="https://github.com/features/copilot">GitHub Copilot</a></li>
+      <li><a href="https://codeium.com">Codeium</a></li>
+      <li><a href="https://replit.com">Replit Ghostwriter</a></li>
+      <li><a href="https://tabnine.com">Tabnine</a></li>
+      <li><a href="https://askthecode.ai">AskTheCode</a></li>
+    </ul>
+  </section>
+
+  <section id="marketing">
+    <h2>🛍️ مارکتینگ و کسب‌وکار</h2>
+    <ul>
+      <li><a href="https://adcreative.ai">AdCreative.ai</a></li>
+      <li><a href="https://ocoya.com">Ocoya</a></li>
+      <li><a href="https://marketmuse.com">MarketMuse</a></li>
+      <li><a href="https://surferseo.com">Surfer SEO</a></li>
+      <li><a href="https://neuraltext.com">NeuralText</a></li>
+    </ul>
+  </section>
+
+  <section id="science">
+    <h2>🧪 تخصصی و علمی</h2>
+    <ul>
+      <li><a href="https://elicit.org">Elicit[43dcd9a7-70db-4a1f-b0ae-981daa162054](https://github.com/abolfazlvakily/WebProgrammingLesson/tree/ea0d8ad6ba32d34328459e0e1d36039a122e4c65/t1%2Fsrc%2Findex.php?citationMarker=43dcd9a7-70db-4a1f-b0ae-981daa162054 "1")</
