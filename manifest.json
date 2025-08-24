@@ -1,0 +1,16 @@
+{
+  "name": "AI Hub",
+  "short_name": "AIHub",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#007bff",
+  "orientation": "portrait",
+  "icons": [
+    {
+      "src": "https://spootter1395-max.github.io/ai-hub/icon.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    }
+  ]
+}
