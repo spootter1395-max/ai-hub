@@ -1,38 +1,74 @@
 <!DOCTYPE html>
 <html lang="fa">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="utf-8">
+  <title>ارائه سید قیامی</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>مرجع ابزارهای هوش مصنوعی</title>
   <link rel="manifest" href="manifest.json">
   <link rel="icon" href="logo-seyed.png" type="image/png">
   <meta name="theme-color" content="#0078d4">
+
+  <!-- Reveal.js styles -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js/dist/reveal.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js/dist/theme/white.css" id="theme">
   <style>
-    body {
+    .reveal section {
       font-family: 'Tahoma', sans-serif;
-      background-color: #f9f9f9;
-      color: #333;
-      text-align: center;
-      padding: 40px;
+      font-size: 28px;
+      direction: rtl;
     }
-    img.logo {
-      width: 120px;
+    .logo {
+      width: 150px;
       border-radius: 16px;
       margin-bottom: 20px;
-    }
-    h1 {
-      font-size: 28px;
-      margin-bottom: 10px;
-    }
-    p {
-      font-size: 18px;
-      line-height: 1.6;
     }
   </style>
 </head>
 <body>
-  <img src="logo-seyed.png" alt="لوگوی دکتر سیدمجتبی قیامی" class="logo">
-  <h1>مرجع ابزارهای هوش مصنوعی</h1>
-  <p>به دنیای ابزارهای هوش مصنوعی خوش آمدید. اینجا می‌تونید بهترین ابزارها رو کشف، تست و استفاده کنید.</p>
+  <div class="reveal">
+    <div class="slides">
+      <section>
+        <img src="logo-seyed.png" alt="لوگو" class="logo">
+        <h2>سلام! 👋</h2>
+        <p>به ارائه دکتر سیدمجتبی قیامی خوش آمدید</p>
+      </section>
+
+      <section>
+        <h2>هدف سایت</h2>
+        <p>ارائه‌ی مرجع ابزارهای هوش مصنوعی برای همه‌ی فارسی‌زبانان</p>
+      </section>
+
+      <section>
+        <h2>امکانات سایت</h2>
+        <ul>
+          <li>دسته‌بندی ابزارها</li>
+          <li>آموزش استفاده از هر ابزار</li>
+          <li>امکان نصب به‌عنوان اپ موبایلی</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>تماس با ما</h2>
+        <p>برای ارتباط با دکتر قیامی: <br> ایمیل: seyed.aihub@gmail.com</p>
+      </section>
+
+      <section>
+        <h2>پایان 🎉</h2>
+        <p>ممنون از توجه شما! <br> برای اطلاعات بیشتر، سایت رو نصب کنید</p>
+      </section>
+    </div>
+  </div>
+
+  <!-- Reveal.js script -->
+  <script src="https://cdn.jsdelivr.net/npm/reveal.js/dist/reveal.js"></script>
+  <script>
+    Reveal.initialize({
+      hash: true,
+      slideNumber: true,
+      transition: 'fade',
+      autoSlide: 0,
+      loop: false
+    });
+  </script>
 </body>
 </html>
