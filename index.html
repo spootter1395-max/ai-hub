@@ -2,88 +2,37 @@
 <html lang="fa">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>AI Hub</title>
-  <link rel="manifest" href="manifest.json">
-  <link rel="icon" href="icon.png" type="image/png">
-  <meta name="theme-color" content="#ffffff">
-  <script>
-    if ('serviceWorker' in navigator) {
-      navigator.serviceWorker.register('sw.js')
-        .then(() => console.log('Service Worker registered!'))
-        .catch(error => console.error('Service Worker registration failed:', error));
-    }
-  </script>
-  <style>
-    body {
-      font-family: sans-serif;
-      background-color: #f9f9f9;
-      text-align: center;
-      padding: 20px;
-    }
-    img.logo {
-      width: 100px;
-      margin-bottom: 20px;
-    }
-    h1 {
-      color: #333;
-    }
-    .ai-box {
-      background: #fff;
-      border: 1px solid #ddd;
-      border-radius: 10px;
-      padding: 15px;
-      margin: 15px auto;
-      max-width: 400px;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    }
-    button {
-      margin: 5px;
-      padding: 10px 15px;
-      border: none;
-      border-radius: 5px;
-      background-color: #0078d4;
-      color: white;
-      cursor: pointer;
-    }
-    button:hover {
-      background-color: #005fa3;
-    }
-  </style>
+  <title>مرجع ابزارهای هوش مصنوعی</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <img src="icon.png" alt="AI Hub Logo" class="logo">
-  <h1>مرکز هوش مصنوعی AI Hub</h1>
+  <header>
+    <h1>🎯 ابزارهای هوش مصنوعی</h1>
+    <p>دسته‌بندی‌شده و قابل گسترش</p>
+  </header>
 
-  <div class="ai-box">
-    <h2>ChatGPT</h2>
-    <button onclick="alert('ChatGPT یک چت‌بات قدرتمند است که می‌تواند به سوالات شما پاسخ دهد، متن بنویسد، ترجمه کند و حتی کدنویسی انجام دهد.')">توضیحات</button>
-    <button onclick="window.open('https://chat.openai.com', '_blank')">ورود به سایت</button>
-  </div>
+  <nav>
+    <ul>
+      <li><a href="#chatbots">چت‌بات‌ها</a></li>
+      <li><a href="#text">تولید متن</a></li>
+      <li><a href="#image">تصویرسازی</a></li>
+      <!-- ادامه دسته‌ها -->
+    </ul>
+  </nav>
 
-  <div class="ai-box">
-    <h2>DALL·E</h2>
-    <button onclick="alert('DALL·E می‌تواند از روی متن شما تصویر تولید کند. مناسب برای طراحی، ایده‌پردازی و خلاقیت.')">توضیحات</button>
-    <button onclick="window.open('https://openai.com/dall-e', '_blank')">ورود به سایت</button>
-  </div>
+  <section id="chatbots">
+    <h2>🤖 چت‌بات‌ها</h2>
+    <ul>
+      <li><a href="https://chat.openai.com">ChatGPT</a></li>
+      <li><a href="https://copilot.microsoft.com">Copilot</a></li>
+      <!-- ابزارهای بیشتر -->
+    </ul>
+  </section>
 
-  <div class="ai-box">
-    <h2>Grammarly</h2>
-    <button onclick="alert('Grammarly ابزار اصلاح متن انگلیسی است که اشتباهات گرامری، نگارشی و سبک نوشتار را بررسی می‌کند.')">توضیحات</button>
-    <button onclick="window.open('https://www.grammarly.com', '_blank')">ورود به سایت</button>
-  </div>
+  <!-- ادامه‌ی دسته‌ها مشابه همین ساختار -->
 
-  <div class="ai-box">
-    <h2>Google Gemini</h2>
-    <button onclick="alert('Gemini چت‌بات گوگل است که می‌تواند تحلیل، پاسخ‌گویی و تولید محتوا انجام دهد.')">توضیحات</button>
-    <button onclick="window.open('https://gemini.google.com', '_blank')">ورود به سایت</button>
-  </div>
-
-  <div class="ai-box">
-    <h2>Leonardo AI</h2>
-    <button onclick="alert('Leonardo AI ابزاری برای طراحی هنری و تولید تصویر با کیفیت بالا از متن است.')">توضیحات</button>
-    <button onclick="window.open('https://leonardo.ai', '_blank')">ورود به سایت</button>
-  </div>
-
+  <footer>
+    <p>ساخته شده با ❤️ توسط سید</p>
+  </footer>
 </body>
 </html>
