@@ -1,52 +1,78 @@
 <!DOCTYPE html>
 <html lang="fa">
 <head>
-  <meta charset="UTF-8">
-  <title>مرجع ابزارهای هوش مصنوعی</title>
+  <meta charset="utf-8">
+  <title>ارائه سید قیامی</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="manifest" href="manifest.json">
   <link rel="icon" href="logo-seyed.png" type="image/png">
   <meta name="theme-color" content="#0078d4">
+
+  <!-- Reveal.js styles -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js/dist/reveal.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js/dist/theme/white.css" id="theme">
+
   <style>
-    body {
+    .reveal section {
       font-family: 'Tahoma', sans-serif;
-      background-color: #f4f4f4;
-      color: #333;
-      text-align: center;
-      padding: 40px;
+      font-size: 26px;
       direction: rtl;
+      text-align: center;
+      padding: 20px;
     }
     .logo {
       width: 140px;
       border-radius: 12px;
       margin-bottom: 20px;
     }
-    h1 {
-      font-size: 28px;
-      margin-bottom: 10px;
-    }
-    p {
-      font-size: 18px;
-      line-height: 1.6;
-      max-width: 600px;
-      margin: auto;
-    }
-    .contact {
-      margin-top: 30px;
-      font-size: 16px;
-      color: #555;
-    }
   </style>
 </head>
 <body>
-  <img src="logo-seyed.png" alt="لوگوی دکتر سید قیامی" class="logo">
-  <h1>مرجع ابزارهای هوش مصنوعی</h1>
-  <p>
-    به دنیای ابزارهای هوش مصنوعی خوش آمدید. این سایت با هدف معرفی، آموزش و دسترسی آسان به بهترین ابزارهای هوش مصنوعی برای فارسی‌زبانان طراحی شده است.
-  </p>
-  <div class="contact">
-    📧 ایمیل: seyed.aihub@gmail.com<br>
-    🌐 آدرس سایت: spootter1395-max.github.io/ai-hub
+
+  <div class="reveal">
+    <div class="slides">
+      <section>
+        <img src="logo-seyed.png" alt="لوگوی سید" class="logo">
+        <h2>سلام! 👋</h2>
+        <p>به ارائه دکتر سیدمجتبی قیامی خوش آمدید</p>
+      </section>
+
+      <section>
+        <h2>هدف سایت</h2>
+        <p>ارائه‌ی مرجع ابزارهای هوش مصنوعی برای فارسی‌زبانان سراسر جهان</p>
+      </section>
+
+      <section>
+        <h2>امکانات سایت</h2>
+        <ul style="list-style:none; padding:0;">
+          <li>✅ دسته‌بندی ابزارها</li>
+          <li>✅ آموزش استفاده از هر ابزار</li>
+          <li>✅ نصب به‌عنوان اپ موبایلی</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>تماس با ما</h2>
+        <p>📧 ایمیل: seyed.aihub@gmail.com<br>🌐 وب‌سایت: spootter1395-max.github.io/ai-hub</p>
+      </section>
+
+      <section>
+        <h2>پایان 🎉</h2>
+        <p>ممنون از توجه شما!<br>برای اطلاعات بیشتر، سایت رو نصب کنید یا با ما در تماس باشید</p>
+      </section>
+    </div>
   </div>
+
+  <!-- Reveal.js script -->
+  <script src="https://cdn.jsdelivr.net/npm/reveal.js/dist/reveal.js"></script>
+  <script>
+    Reveal.initialize({
+      hash: true,
+      slideNumber: true,
+      transition: 'fade',
+      autoSlide: 0,
+      loop: false
+    });
+  </script>
 </body>
 </html>
