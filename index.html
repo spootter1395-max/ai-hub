@@ -2,7 +2,7 @@
 <html lang="fa">
 <head>
   <meta charset="utf-8">
-  <title>ارائه سید قیامی</title>
+  <title>ارائه دکتر سید قیامی</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="manifest" href="manifest.json">
   <link rel="icon" href="logo-seyed.png" type="image/png">
@@ -11,50 +11,95 @@
   <!-- Reveal.js styles -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js/dist/reveal.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js/dist/theme/white.css" id="theme">
+
   <style>
-    .reveal section {
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: #f9f9f9;
       font-family: 'Tahoma', sans-serif;
-      font-size: 28px;
-      direction: rtl;
     }
+
+    nav {
+      text-align: center;
+      background-color: #0078d4;
+      padding: 10px;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    nav button {
+      font-size: 16px;
+      margin: 5px;
+      padding: 8px 16px;
+      border: none;
+      background-color: #ffffff;
+      color: #0078d4;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+
+    nav button:hover {
+      background-color: #e0e0e0;
+    }
+
+    .reveal section {
+      font-size: 24px;
+      direction: rtl;
+      text-align: center;
+      padding: 20px;
+    }
+
     .logo {
-      width: 150px;
-      border-radius: 16px;
+      width: 140px;
+      border-radius: 12px;
       margin-bottom: 20px;
     }
   </style>
 </head>
 <body>
+
+  <!-- منوی قابل کلیک -->
+  <nav>
+    <button onclick="Reveal.slide(0)">صفحه اول</button>
+    <button onclick="Reveal.slide(1)">هدف</button>
+    <button onclick="Reveal.slide(2)">امکانات</button>
+    <button onclick="Reveal.slide(3)">تماس</button>
+    <button onclick="Reveal.slide(4)">پایان</button>
+  </nav>
+
+  <!-- اسلایدها -->
   <div class="reveal">
     <div class="slides">
       <section>
-        <img src="logo-seyed.png" alt="لوگو" class="logo">
+        <img src="logo-seyed.png" alt="لوگوی سید" class="logo">
         <h2>سلام! 👋</h2>
         <p>به ارائه دکتر سیدمجتبی قیامی خوش آمدید</p>
       </section>
 
       <section>
         <h2>هدف سایت</h2>
-        <p>ارائه‌ی مرجع ابزارهای هوش مصنوعی برای همه‌ی فارسی‌زبانان</p>
+        <p>ارائه‌ی مرجع ابزارهای هوش مصنوعی برای فارسی‌زبانان سراسر جهان</p>
       </section>
 
       <section>
         <h2>امکانات سایت</h2>
-        <ul>
-          <li>دسته‌بندی ابزارها</li>
-          <li>آموزش استفاده از هر ابزار</li>
-          <li>امکان نصب به‌عنوان اپ موبایلی</li>
+        <ul style="list-style:none; padding:0;">
+          <li>✅ دسته‌بندی ابزارها</li>
+          <li>✅ آموزش استفاده از هر ابزار</li>
+          <li>✅ نصب به‌عنوان اپ موبایلی</li>
         </ul>
       </section>
 
       <section>
         <h2>تماس با ما</h2>
-        <p>برای ارتباط با دکتر قیامی: <br> ایمیل: seyed.aihub@gmail.com</p>
+        <p>📧 ایمیل: seyed.aihub@gmail.com<br>🌐 وب‌سایت: spootter1395-max.github.io/ai-hub</p>
       </section>
 
       <section>
         <h2>پایان 🎉</h2>
-        <p>ممنون از توجه شما! <br> برای اطلاعات بیشتر، سایت رو نصب کنید</p>
+        <p>ممنون از توجه شما!<br>برای اطلاعات بیشتر، سایت رو نصب کنید یا با ما در تماس باشید</p>
       </section>
     </div>
   </div>
