@@ -2,37 +2,122 @@
 <html lang="fa">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>مرجع ابزارهای هوش مصنوعی</title>
   <link rel="manifest" href="manifest.json">
   <link rel="icon" href="logo-seyed.png" type="image/png">
   <meta name="theme-color" content="#0078d4">
+  <link href="https://cdn.jsdelivr.net/gh/rastikerdar/vazir-font@v30.1.0/dist/font-face.css" rel="stylesheet" type="text/css" />
   <style>
     body {
-      font-family: 'Tahoma', sans-serif;
-      background-color: #f9f9f9;
+      font-family: 'Vazir', sans-serif;
+      background-color: #f0f0f0;
       color: #333;
+      direction: rtl;
+      padding: 20px;
+    }
+    header {
       text-align: center;
-      padding: 40px;
+      margin-bottom: 30px;
     }
-    img.logo {
-      width: 120px;
-      border-radius: 16px;
-      margin-bottom: 20px;
-    }
-    h1 {
-      font-size: 28px;
+    header img {
+      width: 100px;
+      border-radius: 12px;
       margin-bottom: 10px;
     }
-    p {
-      font-size: 18px;
-      line-height: 1.6;
+    nav ul {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      list-style: none;
+      justify-content: center;
+      padding: 0;
+    }
+    nav ul li a {
+      background-color: #0078d4;
+      color: white;
+      padding: 8px 12px;
+      border-radius: 6px;
+      text-decoration: none;
+    }
+    section {
+      margin-top: 40px;
+    }
+    section h2 {
+      color: #0078d4;
+    }
+    section ul {
+      list-style: none;
+      padding: 0;
+    }
+    section ul li {
+      margin: 5px 0;
+    }
+    footer {
+      text-align: center;
+      margin-top: 60px;
+      font-size: 1.1em;
+      color: #444;
+      background-color: #e0e0e0;
+      padding: 20px;
+      border-radius: 12px;
     }
   </style>
 </head>
 <body>
-  <img src="logo-seyed.png" alt="لوگوی دکتر سیدمجتبی قیامی" class="logo">
-  <h1>مرجع ابزارهای هوش مصنوعی</h1>
-  <p>به دنیای ابزارهای هوش مصنوعی خوش آمدید. اینجا می‌تونید بهترین ابزارها رو کشف، تست و استفاده کنید.</p>
+  <header>
+    <img src="logo-seyed.png" alt="لوگوی دکتر سیدمجتبی قیامی">
+    <h1>🎯 مرجع ابزارهای هوش مصنوعی</h1>
+    <p>دسته‌بندی‌شده، کاربردی، و همیشه در حال رشد</p>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="#chatbots">چت‌بات‌ها</a></li>
+      <li><a href="#text">تولید متن</a></li>
+      <li><a href="#image">تصویرسازی</a></li>
+      <li><a href="#video">ویدیو</a></li>
+      <li><a href="#music">موسیقی</a></li>
+      <li><a href="#education">آموزش</a></li>
+      <li><a href="#code">کدنویسی</a></li>
+      <li><a href="#marketing">مارکتینگ</a></li>
+      <li><a href="#science">تخصصی</a></li>
+    </ul>
+  </nav>
+
+  <section id="chatbots">
+    <h2>🤖 چت‌بات‌ها</h2>
+    <ul>
+      <li><a href="https://chat.openai.com">ChatGPT</a></li>
+      <li><a href="https://copilot.microsoft.com">Copilot</a></li>
+      <li><a href="https://claude.ai">Claude</a></li>
+      <li><a href="https://gemini.google.com">Gemini</a></li>
+      <li><a href="https://pi.ai">Pi.ai</a></li>
+    </ul>
+  </section>
+
+  <section id="text">
+    <h2>✍️ تولید متن</h2>
+    <ul>
+      <li><a href="https://jasper.ai">Jasper</a></li>
+      <li><a href="https://copy.ai">Copy.ai</a></li>
+      <li><a href="https://writesonic.com">Writesonic</a></li>
+    </ul>
+  </section>
+
+  <section id="image">
+    <h2>🎨 تصویرسازی</h2>
+    <ul>
+      <li><a href="https://openai.com/dall-e">DALL·E</a></li>
+      <li><a href="https://midjourney.com">Midjourney</a></li>
+      <li><a href="https://leonardo.ai">Leonardo</a></li>
+    </ul>
+  </section>
+
+  <!-- ادامه دسته‌ها رو می‌تونی همین‌طور اضافه کنی -->
+
+  <footer>
+    <p><strong>ساخته شده توسط دکتر سیدمجتبی قیامی</strong> | 📞 <a href="tel:09154353956">09154353956</a></p>
+    <p>🌐 <a href="https://spootter1395-max.github.io/ai-hub">spootter1395-max.github.io/ai-hub</a></p>
+  </footer>
 </body>
 </html>
