@@ -2,108 +2,32 @@
 <html lang="fa">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>AI Hub | دروازه هوش مصنوعی</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI Hub</title>
+  <link rel="manifest" href="manifest.json">
+  <link rel="icon" href="icon.png" type="image/png">
+  <meta name="theme-color" content="#ffffff">
+  <script>
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('sw.js')
+        .then(() => console.log('Service Worker registered!'))
+        .catch(error => console.error('Service Worker registration failed:', error));
+    }
+  </script>
   <style>
     body {
-      font-family: 'Tahoma', sans-serif;
-      background-color: #f0f0f0;
-      padding: 20px;
-      direction: rtl;
-      transition: background-color 0.3s, color 0.3s;
-    }
-    .dark-mode {
-      background-color: #121212;
-      color: #f0f0f0;
-    }
-    .header {
+      font-family: sans-serif;
       text-align: center;
-      margin-bottom: 30px;
+      padding: 50px;
+      background-color: #f0f0f0;
     }
-    .header h1 {
-      font-size: 2.5em;
-      margin: 0;
-    }
-    .header p {
-      font-size: 1.2em;
-      color: #555;
-    }
-    .card {
-      background: white;
-      padding: 15px;
-      margin: 10px 0;
-      border-radius: 8px;
-      box-shadow: 0 0 5px rgba(0,0,0,0.1);
-      transition: background 0.3s;
-    }
-    .dark-mode .card {
-      background: #1e1e1e;
-    }
-    .btn {
-      margin: 5px;
-      padding: 8px 12px;
-      border: none;
-      border-radius: 4px;
-      cursor: pointer;
-      font-weight: bold;
-    }
-    .info { background-color: #007bff; color: white; }
-    .run { background-color: #28a745; color: white; }
-    .toggle-dark {
-      background-color: #333;
-      color: white;
-      float: left;
-      margin-bottom: 20px;
-    }
-    @media (max-width: 600px) {
-      .card h2 { font-size: 1.2em; }
-      .btn { font-size: 0.9em; }
+    h1 {
+      color: #333;
     }
   </style>
 </head>
 <body>
-  <button class="btn toggle-dark" onclick="toggleDarkMode()">🌓 حالت تاریک</button>
-
-  <div class="header">
-    <h1>🧠 AI Hub</h1>
-    <p>دروازه‌ای سریع برای ورود به دنیای هوش مصنوعی</p>
-    <p><a href="https://spootter1395-max.github.io/ai-hub" target="_blank">مشاهده سایت</a></p>
-  </div>
-
-  <div class="card">
-    <h2>ChatGPT</h2>
-    <button class="btn info" onclick="window.open('https://openai.com/chatgpt')">توضیحات</button>
-    <button class="btn run" onclick="window.open('https://chat.openai.com')">اجرا</button>
-  </div>
-
-  <div class="card">
-    <h2>Copilot</h2>
-    <button class="btn info" onclick="window.open('https://copilot.microsoft.com')">توضیحات</button>
-    <button class="btn run" onclick="window.open('https://copilot.microsoft.com')">اجرا</button>
-  </div>
-
-  <div class="card">
-    <h2>Gemini</h2>
-    <button class="btn info" onclick="window.open('https://deepmind.google/technologies/gemini')">توضیحات</button>
-    <button class="btn run" onclick="window.open('https://gemini.google.com')">اجرا</button>
-  </div>
-
-  <div class="card">
-    <h2>Claude</h2>
-    <button class="btn info" onclick="window.open('https://www.anthropic.com/index/claude')">توضیحات</button>
-    <button class="btn run" onclick="window.open('https://claude.ai')">اجرا</button>
-  </div>
-
-  <div class="card">
-    <h2>Meta AI</h2>
-    <button class="btn info" onclick="window.open('https://ai.meta.com')">توضیحات</button>
-    <button class="btn run" onclick="window.open('https://www.meta.ai')">اجرا</button>
-  </div>
-
-  <script>
-    function toggleDarkMode() {
-      document.body.classList.toggle('dark-mode');
-    }
-  </script>
+  <h1>به AI Hub خوش آمدید!</h1>
+  <p>این اپلیکیشن حالا قابل نصب روی موبایل شماست 🎉</p>
 </body>
 </html>
