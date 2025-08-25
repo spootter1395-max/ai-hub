@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>JSON Test</title>
+</head>
+<body>
+  <script>
+    fetch('tools.json')
+      .then(res => res.json())
+      .then(data => console.log('✅ Data:', data))
+      .catch(err => console.error('❌ Error:', err));
+  </script>
+</body>
+</html>
