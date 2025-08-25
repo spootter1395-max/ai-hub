@@ -1,0 +1,62 @@
+[
+  {
+    "name": "ChatGPT",
+    "category": "چت‌بات",
+    "description": "مدل زبانی قدرتمند برای مکالمه طبیعی و پاسخ‌گویی هوشمند",
+    "link": "https://chat.openai.com"
+  },
+  {
+    "name": "Google Gemini",
+    "category": "چت‌بات",
+    "description": "چت‌بات چندرسانه‌ای گوگل با قابلیت تحلیل تصویر، صوت و متن",
+    "link": "https://gemini.google.com"
+  },
+  {
+    "name": "Midjourney",
+    "category": "تصویرسازی",
+    "description": "تولید تصویر هنری با هوش مصنوعی از طریق متن توصیفی",
+    "link": "https://www.midjourney.com"
+  },
+  {
+    "name": "DALL·E",
+    "category": "تصویرسازی",
+    "description": "ابزار تولید تصویر از متن توسط OpenAI با قابلیت ویرایش تصویر",
+    "link": "https://openai.com/dall-e"
+  },
+  {
+    "name": "Runway ML",
+    "category": "ویدیو",
+    "description": "تولید و ویرایش ویدیو با هوش مصنوعی، مناسب برای تولیدکنندگان محتوا",
+    "link": "https://runwayml.com"
+  },
+  {
+    "name": "Pika Labs",
+    "category": "ویدیو",
+    "description": "تبدیل متن به ویدیو با سبک‌های متنوع و انیمیشن‌سازی خودکار",
+    "link": "https://www.pika.art"
+  },
+  {
+    "name": "ElevenLabs",
+    "category": "صدا",
+    "description": "تبدیل متن به گفتار با صدای طبیعی و قابلیت شخصی‌سازی صدا",
+    "link": "https://elevenlabs.io"
+  },
+  {
+    "name": "Descript",
+    "category": "صدا",
+    "description": "ویرایش صوت و ویدیو با قابلیت حذف نویز و تولید گفتار از متن",
+    "link": "https://www.descript.com"
+  },
+  {
+    "name": "Notion AI",
+    "category": "تولید متن",
+    "description": "ابزار هوشمند برای نوشتن، خلاصه‌سازی و تولید محتوا در محیط نوتیشن",
+    "link": "https://www.notion.so/product/ai"
+  },
+  {
+    "name": "Copy.ai",
+    "category": "تولید متن",
+    "description": "تولید متن تبلیغاتی، ایمیل، کپشن و محتوای بازاریابی با هوش مصنوعی",
+    "link": "https://www.copy.ai"
+  }
+]
