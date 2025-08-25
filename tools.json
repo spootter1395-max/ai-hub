@@ -8,7 +8,13 @@
   {
     "name": "Midjourney",
     "category": "تصویرسازی",
-    "description": "تولید تصویر با هوش مصنوعی از طریق متن",
+    "description": "تولید تصویر هنری با هوش مصنوعی از طریق متن",
     "link": "https://www.midjourney.com"
+  },
+  {
+    "name": "ElevenLabs",
+    "category": "صدا",
+    "description": "تبدیل متن به گفتار با صدای طبیعی و قابلیت شخصی‌سازی صدا",
+    "link": "https://elevenlabs.io"
   }
 ]
