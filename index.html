@@ -76,11 +76,6 @@
       if (deferredPrompt) {
         deferredPrompt.prompt();
         deferredPrompt.userChoice.then(choiceResult => {
-          if (choiceResult.outcome === 'accepted') {
-            console.log('✅ نصب تأیید شد');
-          } else {
-            console.log('❌ نصب رد شد');
-          }
           deferredPrompt = null;
         });
       }
