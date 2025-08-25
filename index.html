@@ -2,55 +2,41 @@
 <html lang="fa">
 <head>
   <meta charset="UTF-8">
-  <title>تست ابزارهای هوش مصنوعی</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>اپلیکیشن من</title>
+
+  <!-- آیکون تب مرورگر -->
+  <link rel="icon" href="./copilot_image_1756073482940.jpeg" type="image/jpeg">
+
+  <!-- فایل manifest برای PWA -->
+  <link rel="manifest" href="./manifest.json">
+
+  <!-- رنگ نوار مرورگر در موبایل -->
+  <meta name="theme-color" content="#2196f3">
+
+  <!-- استایل ساده برای تست -->
   <style>
     body {
       font-family: sans-serif;
-      background: #f0f0f0;
-      padding: 20px;
+      text-align: center;
+      padding: 40px;
+      background-color: #f5f5f5;
     }
-    .tool {
-      background: white;
-      border-radius: 8px;
-      padding: 15px;
-      margin-bottom: 10px;
-      box-shadow: 0 0 5px rgba(0,0,0,0.1);
-    }
-    .tool a {
-      color: #0077cc;
-      text-decoration: none;
+    img {
+      width: 120px;
+      margin-bottom: 20px;
     }
   </style>
 </head>
 <body>
-  <h1>🧠 ابزارهای هوش مصنوعی</h1>
-  <div id="tools-container">در حال بارگذاری...</div>
 
-  <script>
-    fetch('tools.json')
-      .then(response => {
-        if (!response.ok) throw new Error('فایل پیدا نشد');
-        return response.json();
-      })
-      .then(data => {
-        const container = document.getElementById('tools-container');
-        container.innerHTML = ''; // پاک کردن متن اولیه
+  <!-- لوگوی تستی -->
+  <img src="./copilot_image_1756073482940.jpeg" alt="لوگوی اپلیکیشن">
 
-        data.forEach(tool => {
-          const div = document.createElement('div');
-          div.className = 'tool';
-          div.innerHTML = `
-            <h2>${tool.name}</h2>
-            <p>${tool.description}</p>
-            <a href="${tool.url}" target="_blank">مشاهده ابزار</a>
-          `;
-          container.appendChild(div);
-        });
-      })
-      .catch(error => {
-        document.getElementById('tools-container').innerHTML = '❌ خطا در دریافت اطلاعات ابزارها';
-        console.error('خطا:', error);
-      });
-  </script>
+  <h1>به اپلیکیشن من خوش اومدی 👋</h1>
+  <p>این نسخه تستی برای بررسی آیکون و manifest هست.</p>
+
+  <!-- فایل جاوااسکریپت -->
+  <script src="./main.js"></script>
 </body>
 </html>
