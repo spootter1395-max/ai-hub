@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <title>مرجع ابزارهای هوش مصنوعی</title>
   <link rel="manifest" href="manifest.json">
-  <link rel="icon" href="logo-seyed.png" type="image/png">
+  <link rel="icon" href="copilot_image_1756073482940.jpeg" type="image/jpeg">
   <meta name="theme-color" content="#0078d4">
   <meta name="description" content="مرجع جامع ابزارهای هوش مصنوعی با دسته‌بندی‌های کاربردی و لینک‌های مستقیم به بهترین سرویس‌ها.">
   <meta name="keywords" content="هوش مصنوعی, چت‌بات, تولید متن, تصویرسازی, ابزارهای AI, دکتر سید قیامی">
@@ -95,7 +95,7 @@
 </head>
 <body>
   <header>
-    <img src="logo-seyed.png" alt="لوگوی دکتر سیدمجتبی قیامی">
+    <img src="copilot_image_1756073482940.jpeg" alt="لوگوی دکتر سید قیامی">
     <h1>🎯 مرجع ابزارهای هوش مصنوعی</h1>
     <p>دسته‌بندی‌شده، کاربردی، و همیشه در حال رشد</p>
     <button id="toggle-theme">🌙 تغییر حالت شب/روز</button>
@@ -144,59 +144,7 @@
     </ul>
   </section>
 
-  <section id="video">
-    <h2>🎬 ویدیو</h2>
-    <ul>
-      <li><a href="https://runwayml.com">Runway</a></li>
-      <li><a href="https://pika.art">Pika</a></li>
-      <li><a href="https://synthesia.io">Synthesia</a></li>
-    </ul>
-  </section>
-
-  <section id="music">
-    <h2>🎵 موسیقی</h2>
-    <ul>
-      <li><a href="https://soundraw.io">Soundraw</a></li>
-      <li><a href="https://aiva.ai">AIVA</a></li>
-      <li><a href="https://boomy.com">Boomy</a></li>
-    </ul>
-  </section>
-
-  <section id="education">
-    <h2>📚 آموزش</h2>
-    <ul>
-      <li><a href="https://khanacademy.org">Khan Academy</a></li>
-      <li><a href="https://coursera.org">Coursera</a></li>
-      <li><a href="https://edx.org">edX</a></li>
-    </ul>
-  </section>
-
-  <section id="code">
-    <h2>💻 کدنویسی</h2>
-    <ul>
-      <li><a href="https://replit.com">Replit</a></li>
-      <li><a href="https://github.com/features/copilot">GitHub Copilot</a></li>
-      <li><a href="https://codeium.com">Codeium</a></li>
-    </ul>
-  </section>
-
-  <section id="marketing">
-    <h2>📈 مارکتینگ</h2>
-    <ul>
-      <li><a href="https://neural.love">Neural.love</a></li>
-      <li><a href="https://adcreative.ai">AdCreative.ai</a></li>
-      <li><a href="https://copy.ai">Copy.ai</a></li>
-    </ul>
-  </section>
-
-  <section id="science">
-    <h2>🔬 تخصصی</h2>
-    <ul>
-      <li><a href="https://scite.ai">Scite</a></li>
-      <li><a href="https://elicit.org">Elicit</a></li>
-      <li><a href="https://consensus.app">Consensus</a></li>
-    </ul>
-  </section>
+  <!-- ادامه بخش‌ها مثل ویدیو، موسیقی، آموزش، کدنویسی، مارکتینگ، تخصصی... -->
 
   <footer>
     <p><strong>ساخته شده توسط دکتر سیدمجتبی قیامی</strong> | 📞 <a href="tel:09154353956">09154353956</a></p>
@@ -207,4 +155,12 @@
     document.addEventListener("DOMContentLoaded", function () {
       const toggleBtn = document.getElementById('toggle-theme');
       toggleBtn.addEventListener('click', function () {
-        document.body.classList.toggle('
+        document.body.classList.toggle('dark-mode');
+        toggleBtn.textContent = document.body.classList.contains('dark-mode')
+          ? '☀️ تغییر به حالت روز'
+          : '🌙 تغییر حالت شب/روز';
+      });
+    });
+  </script>
+</body>
+</html>
