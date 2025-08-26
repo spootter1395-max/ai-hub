@@ -6,14 +6,37 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
   <h1>مرکز ابزارهای هوش مصنوعی</h1>
 
-  <button onclick="startChat()">چت‌بات</button>
-  <button onclick="loadTools()">ابزارها</button>
+  <div class="menu">
+    <button onclick="loadSection('chatbots')">چت‌بات‌ها 🤖</button>
+    <button onclick="loadSection('logo-tools')">طراحی لوگو 🎨</button>
+    <button onclick="loadSection('image-tools')">تولید تصویر 🖼️</button>
+    <button onclick="loadSection('video-tools')">تولید ویدیو 🎬</button>
+    <button onclick="loadSection('sound-tools')">موسیقی و صدا 🎵</button>
+    <button onclick="loadSection('data-tools')">تحلیل داده 📊</button>
+    <button onclick="loadSection('learning-tools')">آموزش و یادگیری 📚</button>
+    <button onclick="loadSection('research-tools')">مدل‌های تحقیقاتی 🧪</button>
+    <button onclick="loadSection('app-tools')">ساخت اپلیکیشن 📱</button>
+  </div>
 
   <div id="content"></div>
 
-  <script src="chatbot.js"></script>
-  <script src="tools.js"></script>
+  <script>
+    function loadSection(name) {
+      fetch(`scripts/${name}.js`)
+        .then(res => res.text())
+        .then(js => {
+          const script = document.createElement('script');
+          script.textContent = js;
+          document.body.appendChild(script);
+        })
+        .catch(err => {
+          document.getElementById('content').innerHTML = `<p>خطا در بارگذاری بخش ${name}</p>`;
+        });
+    }
+  </script>
+
 </body>
 </html>
