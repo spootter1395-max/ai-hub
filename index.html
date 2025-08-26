@@ -3,170 +3,19 @@
 <head>
   <meta charset="UTF-8">
   <title>مرکز ابزارهای هوش مصنوعی</title>
-  <style>
-    body {
-      font-family: 'Tahoma', sans-serif;
-      background-color: #f4f4f4;
-      padding: 20px;
-      direction: rtl;
-    }
-
-    h1 {
-      text-align: center;
-      color: #333;
-      margin-bottom: 30px;
-    }
-
-    .category {
-      background-color: #fff;
-      border-radius: 10px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-      margin-bottom: 15px;
-      overflow: hidden;
-    }
-
-    .category-header {
-      padding: 15px;
-      cursor: pointer;
-      background-color: #0078d4;
-      color: white;
-      font-weight: bold;
-      font-size: 16px;
-    }
-
-    .category-content {
-      display: none;
-      padding: 15px;
-      animation: fadeIn 0.3s ease-in-out;
-    }
-
-    .tool-card {
-      background-color: #fafafa;
-      border-radius: 8px;
-      box-shadow: 0 1px 4px rgba(0,0,0,0.05);
-      padding: 10px;
-      margin-bottom: 10px;
-      text-align: center;
-      transition: transform 0.2s ease;
-    }
-
-    .tool-card:hover {
-      transform: scale(1.03);
-    }
-
-    .tool-card img {
-      width: 60px;
-      height: 60px;
-      object-fit: cover;
-      border-radius: 10px;
-      margin-bottom: 8px;
-    }
-
-    .tool-card h3 {
-      margin: 5px 0;
-      font-size: 15px;
-      color: #222;
-    }
-
-    .tool-card p {
-      font-size: 13px;
-      color: #666;
-      margin-bottom: 10px;
-    }
-
-    .tool-card button {
-      background-color: #0078d4;
-      color: white;
-      border: none;
-      padding: 8px 14px;
-      border-radius: 6px;
-      cursor: pointer;
-      font-size: 14px;
-    }
-
-    .tool-card button:hover {
-      background-color: #005fa3;
-    }
-
-    @keyframes fadeIn {
-      from {opacity: 0;}
-      to {opacity: 1;}
-    }
-  </style>
+  <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
 
-<h1>مرکز ابزارهای هوش مصنوعی</h1>
+  <h1>مرکز ابزارهای هوش مصنوعی</h1>
+  <div id="categories"></div>
 
-<!-- دسته‌بندی چت‌بات‌ها -->
-<div class="category">
-  <div class="category-header" onclick="toggleCategory(this)">🤖 چت‌بات‌ها</div>
-  <div class="category-content">
+  <!-- اول اسکریپت چت‌بات‌ها -->
+  <script type="module" src="assets/js/chatbots.js"></script>
 
-    <!-- ChatGPT -->
-    <div class="tool-card">
-      <img src="image_17561427727072038498641763620412.jpeg" alt="ChatGPT">
-      <h3>ChatGPT</h3>
-      <p>چت‌بات قدرتمند برای تولید متن و پاسخ‌گویی</p>
-      <button onclick="window.open('https://chat.openai.com/', '_blank')">شروع چت</button>
-    </div>
-
-    <!-- Copilot -->
-    <div class="tool-card">
-      <img src="image_17561426629783643083109226717265.jpeg" alt="Copilot">
-      <h3>Copilot</h3>
-      <p>دستیار هوشمند مایکروسافت برای کدنویسی و محتوا</p>
-      <button onclick="window.open('https://copilot.microsoft.com/', '_blank')">شروع چت</button>
-    </div>
-
-    <!-- DeepSeek -->
-    <div class="tool-card">
-      <img src="your-logo-path/deepseek.png" alt="DeepSeek">
-      <h3>DeepSeek</h3>
-      <p>چت‌بات متنی‌یار با تمرکز بر زبان فارسی و تحلیل منطقی</p>
-      <button onclick="window.open('https://chat.deepseek.com/', '_blank')">شروع چت</button>
-    </div>
-
-    <!-- Le Chat Mistral -->
-    <div class="tool-card">
-      <img src="your-logo-path/mistral.png" alt="Mistral">
-      <h3>Le Chat Mistral</h3>
-      <p>چت‌بات سریع و سبک برای مکالمات روزمره</p>
-      <button onclick="window.open('https://chat.mistral.ai/', '_blank')">شروع چت</button>
-    </div>
-
-    <!-- Grok -->
-    <div class="tool-card">
-      <img src="your-logo-path/grok.png" alt="Grok">
-      <h3>Grok</h3>
-      <p>چت‌بات شبکه X برای تحلیل اخبار و گفتگوهای اجتماعی</p>
-      <button onclick="window.open('https://grok.x.ai/', '_blank')">شروع چت</button>
-    </div>
-
-    <!-- Poe -->
-    <div class="tool-card">
-      <img src="your-logo-path/poe.png" alt="Poe">
-      <h3>Poe</h3>
-      <p>پلتفرم آزمایشی برای چت‌بات‌های هوش مصنوعی مختلف</p>
-      <button onclick="window.open('https://poe.com/', '_blank')">شروع چت</button>
-    </div>
-
-  </div>
-</div>
-
-<script>
-  function toggleCategory(header) {
-    const allContents = document.querySelectorAll('.category-content');
-    allContents.forEach(content => {
-      if (content !== header.nextElementSibling) {
-        content.style.display = 'none';
-      }
-    });
-
-    const content = header.nextElementSibling;
-    content.style.display = content.style.display === 'block' ? 'none' : 'block';
-  }
-</script>
+  <!-- بعدی‌ها به ترتیب اضافه می‌شن -->
+  <script type="module" src="assets/js/logo-tools.js"></script>
+  <script type="module" src="assets/js/image-tools.js"></script>
 
 </body>
 </html>
