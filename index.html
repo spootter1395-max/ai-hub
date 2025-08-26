@@ -89,12 +89,6 @@
       from {opacity: 0;}
       to {opacity: 1;}
     }
-
-    @media (max-width: 600px) {
-      .tool-card {
-        font-size: 14px;
-      }
-    }
   </style>
 </head>
 <body>
@@ -106,7 +100,7 @@
     <div class="category-header" onclick="toggleCategory(this)">چت‌بات‌ها</div>
     <div class="category-content">
 
-      <!-- کارت ChatGPT -->
+      <!-- ChatGPT -->
       <div class="tool-card">
         <img src="image_17561427727072038498641763620412.jpeg" alt="ChatGPT Logo">
         <h3>ChatGPT</h3>
@@ -114,7 +108,7 @@
         <button onclick="window.open('https://chat.openai.com/', '_blank')">اجرای ربات</button>
       </div>
 
-      <!-- کارت Copilot -->
+      <!-- Copilot -->
       <div class="tool-card">
         <img src="image_17561426629783643083109226717265.jpeg" alt="Copilot Logo">
         <h3>Copilot</h3>
@@ -122,37 +116,59 @@
         <button onclick="window.open('https://copilot.microsoft.com/', '_blank')">اجرای ربات</button>
       </div>
 
+      <!-- Claude -->
+      <div class="tool-card">
+        <img src="https://claude.ai/favicon.ico" alt="Claude Logo">
+        <h3>Claude</h3>
+        <p>چت‌بات تحلیلی برای خلاصه‌سازی و پاسخ‌های دقیق</p>
+        <button onclick="window.open('https://claude.ai/', '_blank')">اجرای ربات</button>
+      </div>
+
+      <!-- Gemini -->
+      <div class="tool-card">
+        <img src="https://gemini.google.com/favicon.ico" alt="Gemini Logo">
+        <h3>Gemini</h3>
+        <p>چت‌بات گوگل برای تولید محتوا و جستجوی هوشمند</p>
+        <button onclick="window.open('https://gemini.google.com/', '_blank')">اجرای ربات</button>
+      </div>
+
+      <!-- Perplexity -->
+      <div class="tool-card">
+        <img src="https://www.perplexity.ai/favicon.ico" alt="Perplexity Logo">
+        <h3>Perplexity</h3>
+        <p>جستجوی هوشمند با پاسخ‌های مستند و دقیق</p>
+        <button onclick="window.open('https://www.perplexity.ai/', '_blank')">اجرای ربات</button>
+      </div>
+
+      <!-- Pi AI -->
+      <div class="tool-card">
+        <img src="https://heypi.com/favicon.ico" alt="Pi Logo">
+        <h3>Pi AI</h3>
+        <p>چت‌بات شخصی با مکالمه طبیعی و احساسی</p>
+        <button onclick="window.open('https://heypi.com/', '_blank')">اجرای ربات</button>
+      </div>
+
+      <!-- HuggingChat -->
+      <div class="tool-card">
+        <img src="https://huggingface.co/favicon.ico" alt="HuggingChat Logo">
+        <h3>HuggingChat</h3>
+        <p>چت‌بات متن‌باز از HuggingFace برای توسعه‌دهندگان</p>
+        <button onclick="window.open('https://huggingface.co/chat/', '_blank')">اجرای ربات</button>
+      </div>
+
     </div>
   </div>
 
-  <!-- دسته‌های دیگر -->
-  <div class="category">
-    <div class="category-header" onclick="toggleCategory(this)">تولید تصویر</div>
-    <div class="category-content">
-      <p>در حال اضافه شدن...</p>
-    </div>
-  </div>
-
-  <div class="category">
-    <div class="category-header" onclick="toggleCategory(this)">تحلیل داده</div>
-    <div class="category-content">
-      <p>در حال اضافه شدن...</p>
-    </div>
-  </div>
-
-  <script>
-    function toggleCategory(header) {
-      const allContents = document.querySelectorAll('.category-content');
-      allContents.forEach(content => {
-        if (content.previousElementSibling !== header) {
-          content.style.display = 'none';
-        }
-      });
-
-      const content = header.nextElementSibling;
-      content.style.display = (content.style.display === 'block') ? 'none' : 'block';
-    }
-  </script>
-
-</body>
-</html>
+  <!-- دسته‌بندی‌های دیگر -->
+  <div class="category"><div class="category-header" onclick="toggleCategory(this)">🎨 طراحی لوگو</div><div class="category-content"><p>در حال اضافه شدن...</p></div></div>
+  <div class="category"><div class="category-header" onclick="toggleCategory(this)">🖼️ تولید تصویر</div><div class="category-content"><p>در حال اضافه شدن...</p></div></div>
+  <div class="category"><div class="category-header" onclick="toggleCategory(this)">🎬 تولید ویدیو</div><div class="category-content"><p>در حال اضافه شدن...</p></div></div>
+  <div class="category"><div class="category-header" onclick="toggleCategory(this)">🎼 تولید موسیقی و صدا</div><div class="category-content"><p>در حال اضافه شدن...</p></div></div>
+  <div class="category"><div class="category-header" onclick="toggleCategory(this)">📊 تحلیل داده</div><div class="category-content"><p>در حال اضافه شدن...</p></div></div>
+  <div class="category"><div class="category-header" onclick="toggleCategory(this)">📚 آموزش و یادگیری</div><div class="category-content"><p>در حال اضافه شدن...</p></div></div>
+  <div class="category"><div class="category-header" onclick="toggleCategory(this)">🧠 مدل‌های تحقیقاتی</div><div class="category-content"><p>در حال اضافه شدن...</p></div></div>
+  <div class="category"><div class="category-header" onclick="toggleCategory(this)">📱 ساخت اپلیکیشن</div><div class="category-content"><p>در حال اضافه شدن...</p></div></div>
+  <div class="category"><div class="category-header" onclick="toggleCategory(this)">📝 تولید متن و نویسندگی</div><div class="category-content"><p>در حال اضافه شدن...</p></div></div>
+  <div class="category"><div class="category-header" onclick="toggleCategory(this)">📧 اتوماسیون ایمیل و CRM</div><div class="category-content"><p>در حال اضافه شدن...</p></div></div>
+  <div class="category"><div class="category-header" onclick="toggleCategory(this)">🧑‍💼 دستیارهای شخصی و جلسات</div><div class="category-content"><p>در حال اضافه شدن...</p></div></div>
+  <div class="category"><div class="category-header" onclick="toggleCategory(this)">
