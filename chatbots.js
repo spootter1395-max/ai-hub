@@ -1,13 +1,26 @@
-const container = document.getElementById("categories");
+function startChat() {
+  const content = document.getElementById('content');
+  content.innerHTML = `
+    <h2>چت‌بات</h2>
+    <input type="text" id="userInput" placeholder="پیام خود را وارد کنید">
+    <button onclick="sendMessage()">ارسال</button>
+    <div id="chatLog"></div>
+  `;
+}
 
-const chatbotsHTML = `
-<div class="category">
-  <div class="category-header" onclick="toggleCategory(this)">🤖 چت‌بات‌ها</div>
-  <div class="category-content">
-    <!-- کارت‌های چت‌بات‌ها اینجا قرار می‌گیرن -->
-    <!-- مثل ChatGPT، Copilot، Poe و... -->
-  </div>
-</div>
-`;
+function sendMessage() {
+  const input = document.getElementById('userInput').value;
+  const chatLog = document.getElementById('chatLog');
+  let response = '';
 
-container.innerHTML += chatbotsHTML;
+  if (input.includes('سلام')) {
+    response = 'سلام! چطور می‌تونم کمکت کنم؟';
+  } else if (input.includes('خداحافظ')) {
+    response = 'فعلاً! هر وقت خواستی برگرد.';
+  } else {
+    response = 'متوجه نشدم، لطفاً واضح‌تر بگو.';
+  }
+
+  chatLog.innerHTML += `<p><strong>شما:</strong> ${input}</p>`;
+  chatLog.innerHTML += `<p><strong>چت‌بات:</strong> ${response}</p>`;
+}
