@@ -1,21 +1,4 @@
-<!DOCTYPE html>
-<html lang="fa">
-<head>
-  <meta charset="UTF-8">
-  <title>مرکز ابزارهای هوش مصنوعی</title>
-  <link rel="stylesheet" href="assets/css/style.css">
-</head>
-<body>
-
-  <h1>مرکز ابزارهای هوش مصنوعی</h1>
-  <div id="categories"></div>
-
-  <!-- اول اسکریپت چت‌بات‌ها -->
-  <script type="module" src="assets/js/chatbots.js"></script>
-
-  <!-- بعدی‌ها به ترتیب اضافه می‌شن -->
-  <script type="module" src="assets/js/logo-tools.js"></script>
-  <script type="module" src="assets/js/image-tools.js"></script>
-
-</body>
-</html>
+<script type="module">
+  import { renderChatbots } from './assets/js/chatbots.js';
+  document.getElementById("categories").innerHTML += renderChatbots();
+</script>
