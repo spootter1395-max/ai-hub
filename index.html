@@ -3,8 +3,81 @@
 <head>
   <meta charset="UTF-8">
   <title>مرکز ابزارهای هوش مصنوعی</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="style.css">
-  <script src="logo.js" defer></script>
+  <style>
+    body {
+      font-family: sans-serif;
+      background: #f9f9f9;
+      padding: 20px;
+      direction: rtl;
+    }
+    .main-title {
+      font-size: 24px;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+    .welcome {
+      margin-bottom: 20px;
+      color: #555;
+    }
+    .menu-item {
+      background: #e0e0e0;
+      padding: 10px;
+      margin-top: 10px;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+    .submenu {
+      display: none;
+      padding: 10px;
+      background: #fff;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+    .tool-card {
+      background: #fefefe;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      padding: 10px;
+      margin: 10px 0;
+      text-align: center;
+    }
+    .tool-card img {
+      width: 40px;
+      height: 40px;
+      margin-bottom: 5px;
+    }
+    .tool-card h3 {
+      margin: 5px 0;
+    }
+    .tool-card p {
+      font-size: 13px;
+      color: #666;
+    }
+    .tool-card button {
+      margin-top: 8px;
+      padding: 6px 12px;
+      background: #0077cc;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    footer {
+      margin-top: 40px;
+      padding: 20px;
+      background: #f0f0f0;
+      border-radius: 10px;
+      text-align: center;
+      font-size: 14px;
+      color: #333;
+    }
+    footer img {
+      width: 90px;
+      margin: 10px auto;
+    }
+  </style>
 </head>
 <body>
 
@@ -65,13 +138,47 @@
 
     <!-- دسته‌بندی طراحی لوگو -->
     <div class="menu-item" onclick="toggleMenu(this)">
-      🎨 لوگو
+      🎨 طراحی لوگو
     </div>
     <div class="submenu" id="logo-tools">
-      <!-- ابزارهای طراحی لوگو با جاوااسکریپت لود می‌شن -->
+      <div class="tool-card">
+        <img src="https://looka.com/favicon.ico" alt="Looka">
+        <h3>Looka</h3>
+        <p>طراحی لوگو حرفه‌ای با هوش مصنوعی</p>
+        <button onclick="window.open('https://looka.com/', '_blank')">استفاده کن</button>
+      </div>
+      <div class="tool-card">
+        <img src="https://logoai.com/favicon.ico" alt="LogoAI">
+        <h3>LogoAI</h3>
+        <p>ساخت لوگو با الگوریتم‌های هوشمند</p>
+        <button onclick="window.open('https://logoai.com/', '_blank')">استفاده کن</button>
+      </div>
+      <div class="tool-card">
+        <img src="https://brandmark.io/favicon.ico" alt="Brandmark">
+        <h3>Brandmark</h3>
+        <p>طراحی برند و لوگو با هوش مصنوعی</p>
+        <button onclick="window.open('https://brandmark.io/', '_blank')">استفاده کن</button>
+      </div>
     </div>
 
   </div>
+
+  <!-- موسیقی ملایم -->
+  <audio autoplay loop>
+    <source src="https://cdn.pixabay.com/download/audio/2022/03/15/audio_7f3e2b3b7e.mp3?filename=relaxing-time-112191.mp3" type="audio/mpeg">
+    مرورگر شما از پخش صوت پشتیبانی نمی‌کند.
+  </audio>
+
+  <!-- امضا و نماد اعتماد -->
+  <footer>
+    <img src="copilot_image_1756075652738.jpeg" alt="لوگوی آذرخش">
+    <strong>تهیه شده در گروه تحقیقاتی آذرخش</strong><br>
+    سیدمجتبی قیامی<br>
+    <span dir="ltr">09154353956</span><br>
+    ساخت انواع ربات، اپلیکیشن، تریدر، کانال سیگنال<br>
+    دارنده اولین مقام بین‌المللی هوش مصنوعی در استان<br><br>
+    <img src="https://trustseal.enamad.ir/logo.aspx" alt="نماد اعتماد الکترونیکی">
+  </footer>
 
   <script>
     function toggleMenu(element) {
@@ -81,7 +188,6 @@
           sub.style.display = 'none';
         }
       });
-
       const submenu = element.nextElementSibling;
       submenu.style.display = submenu.style.display === 'block' ? 'none' : 'block';
     }
