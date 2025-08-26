@@ -1,111 +1,85 @@
-
 <!DOCTYPE html>
 <html lang="fa">
 <head>
   <meta charset="UTF-8">
-  <title>ابزارهای هوش مصنوعی</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>مرکز ابزارهای هوش مصنوعی</title>
   <style>
     body {
-      font-family: 'Vazir', sans-serif;
+      font-family: 'Tahoma', sans-serif;
       background-color: #f4f4f4;
       margin: 0;
       padding: 20px;
       direction: rtl;
     }
+
     h1 {
       text-align: center;
       color: #333;
     }
-    .category {
-      margin-top: 30px;
-    }
-    .category h2 {
-      color: #444;
-      border-bottom: 2px solid #ccc;
-      padding-bottom: 5px;
-    }
-    .ai-grid {
+
+    .tools-container {
       display: flex;
       flex-wrap: wrap;
+      justify-content: center;
       gap: 20px;
-      margin-top: 15px;
+      margin-top: 30px;
     }
-    .ai-card {
+
+    .tool-card {
       background-color: #fff;
-      border-radius: 10px;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      border-radius: 12px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      width: 220px;
       padding: 15px;
-      width: 250px;
       text-align: center;
+      transition: transform 0.2s ease;
     }
-    .ai-card img {
-      width: 60px;
-      height: 60px;
-      border-radius: 50%;
+
+    .tool-card:hover {
+      transform: scale(1.05);
     }
-    .ai-card h3 {
-      margin: 10px 0;
+
+    .tool-card img {
+      width: 64px;
+      height: 64px;
+      object-fit: cover;
+      border-radius: 10px;
+      margin-bottom: 10px;
+    }
+
+    .tool-card h3 {
+      margin: 10px 0 5px;
       color: #222;
     }
-    .ai-card p {
+
+    .tool-card p {
       font-size: 14px;
       color: #666;
-    }
-    .ai-card button {
-      background-color: #0078d4;
-      color: white;
-      border: none;
-      padding: 8px 12px;
-      border-radius: 5px;
-      cursor: pointer;
-      margin-top: 10px;
-    }
-    .ai-card a {
-      display: block;
-      margin-top: 8px;
-      color: #0078d4;
-      text-decoration: none;
-      font-size: 14px;
     }
   </style>
 </head>
 <body>
 
-  <h1>🧠 ابزارهای هوش مصنوعی</h1>
+  <h1>مرکز ابزارهای هوش مصنوعی</h1>
 
-  <div class="category">
-    <h2>🗣 چت‌بات‌ها</h2>
-    <div class="ai-grid">
-      <div class="ai-card">
-        <img src="chatgpt.png" alt="ChatGPT">
-        <h3>ChatGPT</h3>
-        <p>چت‌بات قدرتمند برای گفتگو و تولید متن</p>
-        <button onclick="showUsage('chatgpt')">📘 کاربرد</button>
-        <a href="https://chat.openai.com" target="_blank">🌐 ورود</a>
-      </div>
-      <div class="ai-card">
-        <img src="copilot.png" alt="Copilot">
-        <h3>Copilot</h3>
-        <p>دستیار هوشمند برای کدنویسی و تولید محتوا</p>
-        <button onclick="showUsage('copilot')">📘 کاربرد</button>
-        <a href="https://copilot.microsoft.com" target="_blank">🌐 ورود</a>
-      </div>
-      <!-- ابزارهای دیگر... -->
+  <div class="tools-container">
+
+    <!-- کارت Copilot -->
+    <div class="tool-card">
+      <img src="images/image_17561426629783643083109226717265.jpeg" alt="Copilot Logo">
+      <h3>Copilot</h3>
+      <p>دستیار هوشمند برای کدنویسی، تولید محتوا و حل مسائل فنی</p>
     </div>
+
+    <!-- کارت ChatGPT -->
+    <div class="tool-card">
+      <img src="images/image_17561427727072038498641763620412.jpeg" alt="ChatGPT Logo">
+      <h3>ChatGPT</h3>
+      <p>چت‌بات قدرتمند برای گفتگو، تولید متن و پاسخ به سوالات</p>
+    </div>
+
   </div>
-
-  <!-- دسته‌های دیگر مثل تولید تصویر، کدنویسی، ترجمه و... -->
-
-  <script>
-    function showUsage(tool) {
-      const usage = {
-        chatgpt: "ChatGPT برای گفتگو، تولید متن، ترجمه، کدنویسی و پاسخ‌گویی استفاده می‌شود.",
-        copilot: "Copilot به برنامه‌نویسان کمک می‌کند تا سریع‌تر و دقیق‌تر کد بنویسند و محتوا تولید کنند.",
-        // ادامه ابزارها...
-      };
-      alert(usage[tool]);
-    }
-  </script>
 
 </body>
 </html>
