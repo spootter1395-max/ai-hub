@@ -1,64 +1,26 @@
-<!DOCTYPE html>
-<html lang="fa">
-<head>
-  <meta charset="UTF-8">
-  <title>مرکز ابزارهای هوش مصنوعی</title>
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
+<script>
+function hideAll() {
+  document.querySelectorAll('.submenu').forEach(el => el.style.display = 'none');
+}
 
-  <!-- لوگو و خوش‌آمدگویی -->
-  <div class="header">
-    <img src="assets/images/logo.png" alt="لوگو" class="logo">
-    <h1>مرکز ابزارهای هوش مصنوعی</h1>
-    <p>به دنیای ابزارهای هوشمند خوش آمدید 🌟</p>
-  </div>
-
-  <!-- دسته‌بندی‌ها -->
-  <div class="category">
-    <div class="category-header" onclick="toggleCategory(this)">🤖 چت‌بات‌ها</div>
-    <div class="category-content">
-
-      <div class="tool-card">
-        <img src="assets/images/chatgpt.png" alt="ChatGPT">
-        <h3>ChatGPT</h3>
-        <p>چت‌بات قدرتمند برای تولید متن و پاسخ‌گویی از OpenAI</p>
-        <button onclick="window.open('https://chat.openai.com/', '_blank')">استفاده کن</button>
-      </div>
-
-      <div class="tool-card">
-        <img src="assets/images/copilot.png" alt="Copilot">
-        <h3>Copilot</h3>
-        <p>دستیار هوشمند مایکروسافت برای کدنویسی، محتوا و تصویر</p>
-        <button onclick="window.open('https://copilot.microsoft.com/', '_blank')">استفاده کن</button>
-      </div>
-
-      <div class="tool-card">
-        <img src="assets/images/deepseek.png" alt="DeepSeek">
-        <h3>DeepSeek</h3>
-        <p>چت‌بات فارسی‌یار با توانایی تحلیل و جستجوی عمیق</p>
-        <button onclick="window.open('https://chat.deepseek.com/', '_blank')">استفاده کن</button>
-      </div>
-
-      <div class="tool-card">
-        <img src="assets/images/mistral.png" alt="Mistral">
-        <h3>Le Chat Mistral</h3>
-        <p>چت‌بات سریع و سبک برای مکالمات روزمره</p>
-        <button onclick="window.open('https://chat.mistral.ai/', '_blank')">استفاده کن</button>
-      </div>
-
-      <div class="tool-card">
-        <img src="assets/images/poe.png" alt="Poe">
-        <h3>Poe</h3>
-        <p>پلتفرم آزمایشی برای چت‌بات‌های مختلف هوش مصنوعی</p>
-        <button onclick="window.open('https://poe.com/', '_blank')">استفاده کن</button>
-      </div>
-
+function showChatbots() {
+  hideAll();
+  const container = document.getElementById('chatbots');
+  container.innerHTML = `
+    <div class="tool-card">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/0/04/OpenAI_Logo.svg" alt="ChatGPT">
+      <h3>ChatGPT</h3>
+      <p>چت‌بات قدرتمند برای تولید متن و پاسخ‌گویی از OpenAI</p>
+      <button onclick="window.open('https://chat.openai.com/', '_blank')">استفاده کن</button>
     </div>
-  </div>
-
-  <!-- دسته‌های بعدی مثل طراحی لوگو، تولید تصویر و... به همین سبک اضافه می‌شن -->
-
-  <script src="script.js"></script>
-</body>
-</html>
+    <div class="tool-card">
+      <img src="https://copilot.microsoft.com/favicon.ico" alt="Copilot">
+      <h3>Copilot</h3>
+      <p>دستیار هوشمند مایکروسافت برای کدنویسی، محتوا و تصویر</p>
+      <button onclick="window.open('https://copilot.microsoft.com/', '_blank')">استفاده کن</button>
+    </div>
+    <!-- بقیه چت‌بات‌ها همین‌طور -->
+  `;
+  container.style.display = 'block';
+}
+</script>
