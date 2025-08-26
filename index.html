@@ -2,130 +2,80 @@
 <html lang="fa">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>مرکز ابزارهای هوش مصنوعی</title>
-  <style>
-    body {
-      font-family: 'Vazirmatn', sans-serif;
-      background-color: #f9f9f9;
-      color: #333;
-      margin: 0;
-      padding: 0;
-      direction: rtl;
-    }
-    header {
-      background-color: #ffffff;
-      padding: 2rem;
-      text-align: center;
-      box-shadow: 0 2px 4px rgba(0,0,0,0.05);
-    }
-    header h1 {
-      font-size: 1.8rem;
-      margin-bottom: 0.5rem;
-    }
-    header p {
-      font-size: 1rem;
-      color: #777;
-    }
-    .container {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 1.5rem;
-      padding: 2rem;
-    }
-    .card {
-      background-color: #fff;
-      border-radius: 12px;
-      padding: 1.5rem;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
-      text-align: center;
-      transition: transform 0.2s ease;
-    }
-    .card:hover {
-      transform: translateY(-4px);
-    }
-    .card img {
-      width: 60px;
-      margin-bottom: 1rem;
-    }
-    .card h2 {
-      font-size: 1.2rem;
-      margin-bottom: 0.5rem;
-    }
-    .card p {
-      font-size: 0.9rem;
-      color: #555;
-      margin-bottom: 1rem;
-    }
-    .card a {
-      display: inline-block;
-      padding: 0.5rem 1rem;
-      background-color: #0078d4;
-      color: #fff;
-      border-radius: 6px;
-      text-decoration: none;
-      font-size: 0.9rem;
-    }
-    footer {
-      text-align: center;
-      padding: 1rem;
-      font-size: 0.8rem;
-      color: #aaa;
-    }
-  </style>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header>
-    <h1>🌟 به دنیای ابزارهای هوشمند خوش آمدید</h1>
-    <p>ابزارهای منتخب برای تجربه‌ی هوش مصنوعی فارسی</p>
-  </header>
 
-  <section class="container">
-    <div class="card">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/0/04/ChatGPT_logo.svg" alt="ChatGPT">
-      <h2>ChatGPT</h2>
-      <p>چت‌بات هوشمند مبتنی بر OpenAI با قابلیت‌های پیشرفته</p>
-      <a href="#">استفاده</a>
+  <div class="main-title">مرکز ابزارهای هوش مصنوعی</div>
+  <p class="welcome">به دنیای ابزارهای هوشمند خوش آمدید 🌟</p>
+
+  <div class="menu-list">
+
+    <div class="menu-item" onclick="toggleMenu(this)">
+      🤖 چت‌بات‌ها
+    </div>
+    <div class="submenu">
+
+      <div class="tool-card">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/0/04/OpenAI_Logo.svg" alt="ChatGPT">
+        <h3>ChatGPT</h3>
+        <p>چت‌باتی هوشمند برای پاسخ‌گویی از OpenAI</p>
+        <button onclick="window.open('https://chat.openai.com/', '_blank')">استفاده کن</button>
+      </div>
+
+      <div class="tool-card">
+        <img src="https://copilot.microsoft.com/favicon.ico" alt="Copilot">
+        <h3>Copilot</h3>
+        <p>چت‌باتی هوشمند مایکروسافتی برای کدنویسی، نوشتن و تصویر</p>
+        <button onclick="window.open('https://copilot.microsoft.com/', '_blank')">استفاده کن</button>
+      </div>
+
+      <div class="tool-card">
+        <img src="https://chat.deepseek.com/favicon.ico" alt="DeepSeek">
+        <h3>DeepSeek</h3>
+        <p>چت‌بات فارسی‌زبان برای تحلیل و جست‌وجوی داده‌ها</p>
+        <button onclick="window.open('https://chat.deepseek.com/', '_blank')">استفاده کن</button>
+      </div>
+
+      <div class="tool-card">
+        <img src="https://mistral.ai/favicon.ico" alt="Le Chat Mistral">
+        <h3>Le Chat Mistral</h3>
+        <p>چت‌باتی هوشمند و سبک برای مکالمات روزمره</p>
+        <button onclick="window.open('https://chat.mistral.ai/', '_blank')">استفاده کن</button>
+      </div>
+
+      <div class="tool-card">
+        <img src="https://grok.x.ai/favicon.ico" alt="Grok">
+        <h3>Grok</h3>
+        <p>چت‌بات شبکه X برای تحلیل اخبار و گفتگوهای اجتماعی</p>
+        <button onclick="window.open('https://grok.x.ai/', '_blank')">استفاده کن</button>
+      </div>
+
+      <div class="tool-card">
+        <img src="https://poe.com/favicon.ico" alt="Poe">
+        <h3>Poe</h3>
+        <p>پلتفرم آزمایشی برای چت‌بات‌های هوش مصنوعی</p>
+        <button onclick="window.open('https://poe.com/', '_blank')">استفاده کن</button>
+      </div>
+
     </div>
 
-    <div class="card">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/9/9e/DeepSeek_logo.svg" alt="DeepSeek">
-      <h2>DeepSeek</h2>
-      <p>چت‌بات قدرتمند مبتنی بر مدل‌های چینی</p>
-      <a href="#">استفاده</a>
-    </div>
+  </div>
 
-    <div class="card">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/7/7e/Mistral_AI_logo.svg" alt="Mistral">
-      <h2>Le Chat Mistral</h2>
-      <p>چت‌بات مبتنی بر مدل‌های Mistral با دقت بالا</p>
-      <a href="#">استفاده</a>
-    </div>
+  <script>
+    function toggleMenu(element) {
+      const allSubmenus = document.querySelectorAll('.submenu');
+      allSubmenus.forEach(sub => {
+        if (sub !== element.nextElementSibling) {
+          sub.style.display = 'none';
+        }
+      });
 
-    <div class="card">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/3/3e/XAI_Grok_logo.svg" alt="Grok">
-      <h2>Grok</h2>
-      <p>چت‌بات مبتنی بر مدل‌های xAI با پاسخ‌های عمیق</p>
-      <a href="#">استفاده</a>
-    </div>
+      const submenu = element.nextElementSibling;
+      submenu.style.display = submenu.style.display === 'block' ? 'none' : 'block';
+    }
+  </script>
 
-    <div class="card">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/5/5e/Poe_logo.svg" alt="Poe">
-      <h2>Poe</h2>
-      <p>پلتفرم جامع برای استفاده از چت‌بات‌های مختلف</p>
-      <a href="#">استفاده</a>
-    </div>
-
-    <div class="card">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/4/4f/Copilot_logo.svg" alt="Copilot">
-      <h2>Copilot</h2>
-      <p>دستیار هوشمند برنامه‌نویسی با قابلیت تکمیل خودکار کد</p>
-      <a href="#">استفاده</a>
-    </div>
-  </section>
-
-  <footer>
-    © 2025 مرکز ابزارهای هوش مصنوعی | طراحی با عشق توسط سید 💙
-  </footer>
 </body>
 </html>
