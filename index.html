@@ -1,222 +1,54 @@
-<!DOCTYPE html>
-<html lang="fa">
-<head>
-  <meta charset="UTF-8">
-  <title>مرجع ابزارهای هوش مصنوعی</title>
-  <style>
-    body {
-      font-family: 'Vazir', sans-serif;
-      background-color: #f4f4f4;
-      margin: 0;
-      padding: 20px;
-      direction: rtl;
-    }
+<div class="category">
+  <div class="category-header" onclick="toggleCategory(this)">🤖 چت‌بات‌ها</div>
+  <div class="category-content">
 
-    .category {
-      margin-bottom: 30px;
-      border-radius: 10px;
-      background-color: #ffffff;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-      overflow: hidden;
-    }
-
-    .category-header {
-      background-color: #0078D4;
-      color: white;
-      padding: 15px 20px;
-      font-size: 18px;
-      font-weight: bold;
-      cursor: pointer;
-      transition: background-color 0.3s ease;
-    }
-
-    .category-header:hover {
-      background-color: #005fa3;
-    }
-
-    .category-content {
-      display: none;
-      padding: 20px;
-      animation: fadeIn 0.4s ease-in-out;
-    }
-
-    .tool-card {
-      background-color: #f9f9f9;
-      border-radius: 8px;
-      padding: 15px;
-      margin-bottom: 15px;
-      box-shadow: 0 1px 4px rgba(0,0,0,0.1);
-      display: flex;
-      align-items: center;
-      gap: 15px;
-    }
-
-    .tool-card img {
-      width: 50px;
-      height: 50px;
-      object-fit: contain;
-      border-radius: 5px;
-    }
-
-    .tool-card h3 {
-      margin: 0;
-      font-size: 16px;
-      color: #333;
-    }
-
-    .tool-card p {
-      margin: 5px 0 0;
-      font-size: 14px;
-      color: #666;
-    }
-
-    .tool-card button {
-      margin-right: auto;
-      padding: 8px 16px;
-      background-color: #0078D4;
-      color: white;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-      font-size: 14px;
-    }
-
-    .tool-card button:hover {
-      background-color: #005fa3;
-    }
-
-    @keyframes fadeIn {
-      from {opacity: 0;}
-      to {opacity: 1;}
-    }
-  </style>
-</head>
-<body>
-
-  <!-- دسته چت‌بات‌ها -->
-  <div class="category">
-    <div class="category-header" onclick="toggleCategory(this)">💬 چت‌بات‌های هوش مصنوعی</div>
-    <div class="category-content">
-
-      <div class="tool-card">
-        <img src="your-logo-path/copilot.png" alt="Copilot">
-        <div>
-          <h3>Microsoft Copilot</h3>
-          <p>دستیار هوشمند مایکروسافت با قابلیت تولید محتوا، تصویر، صدا و تحلیل فایل</p>
-        </div>
-        <button onclick="window.open('https://copilot.microsoft.com/', '_blank')">شروع گفتگو</button>
-      </div>
-
-      <div class="tool-card">
-        <img src="your-logo-path/chatgpt.png" alt="ChatGPT">
-        <div>
-          <h3>ChatGPT</h3>
-          <p>چت‌بات قدرتمند از OpenAI با توانایی پاسخ‌گویی، برنامه‌نویسی و خلاقیت</p>
-        </div>
-        <button onclick="window.open('https://chat.openai.com/', '_blank')">شروع گفتگو</button>
-      </div>
-
-      <div class="tool-card">
-        <img src="your-logo-path/gemini.png" alt="Gemini">
-        <div>
-          <h3>Gemini</h3>
-          <p>دستیار هوش مصنوعی گوگل با ادغام در جیمیل، Docs و جستجو</p>
-        </div>
-        <button onclick="window.open('https://gemini.google.com/', '_blank')">شروع گفتگو</button>
-      </div>
-
-      <div class="tool-card">
-        <img src="your-logo-path/claude.png" alt="Claude">
-        <div>
-          <h3>Claude</h3>
-          <p>چت‌بات اخلاق‌محور از Anthropic با تمرکز بر امنیت و دقت بالا</p>
-        </div>
-        <button onclick="window.open('https://claude.ai/', '_blank')">شروع گفتگو</button>
-      </div>
-
-      <div class="tool-card">
-        <img src="your-logo-path/pi.png" alt="Pi">
-        <div>
-          <h3>Pi</h3>
-          <p>چت‌بات شخصی با تمرکز بر گفت‌وگوی احساسی و همراهی روزمره</p>
-        </div>
-        <button onclick="window.open('https://heypi.com/', '_blank')">شروع گفتگو</button>
-      </div>
-
+    <!-- ChatGPT -->
+    <div class="tool-card">
+      <img src="image_17561427727072038498641763620412.jpeg" alt="ChatGPT">
+      <h3>ChatGPT</h3>
+      <p>چت‌بات قدرتمند برای تولید متن و پاسخ‌گویی</p>
+      <button onclick="window.open('https://chat.openai.com/', '_blank')">شروع چت</button>
     </div>
+
+    <!-- Copilot -->
+    <div class="tool-card">
+      <img src="image_17561426629783643083109226717265.jpeg" alt="Copilot">
+      <h3>Copilot</h3>
+      <p>دستیار هوشمند مایکروسافت برای کدنویسی و محتوا</p>
+      <button onclick="window.open('https://copilot.microsoft.com/', '_blank')">شروع چت</button>
+    </div>
+
+    <!-- DeepSeek -->
+    <div class="tool-card">
+      <img src="your-logo-path/deepseek.png" alt="DeepSeek">
+      <h3>DeepSeek</h3>
+      <p>چت‌بات مبتنی‌بر زبان چینی و انگلیسی با تحلیل منطقی</p>
+      <button onclick="window.open('https://chat.deepseek.com/', '_blank')">شروع چت</button>
+    </div>
+
+    <!-- Le Chat Mistral -->
+    <div class="tool-card">
+      <img src="your-logo-path/mistral.png" alt="Mistral">
+      <h3>Le Chat Mistral</h3>
+      <p>چت‌بات سریع و سبک برای مکالمات روزمره</p>
+      <button onclick="window.open('https://chat.mistral.ai/', '_blank')">شروع چت</button>
+    </div>
+
+    <!-- Grok -->
+    <div class="tool-card">
+      <img src="your-logo-path/grok.png" alt="Grok">
+      <h3>Grok</h3>
+      <p>چت‌بات شبکه X برای تحلیل اخبار و گفتگوهای اجتماعی</p>
+      <button onclick="window.open('https://grok.x.ai/', '_blank')">شروع چت</button>
+    </div>
+
+    <!-- Poe -->
+    <div class="tool-card">
+      <img src="your-logo-path/poe.png" alt="Poe">
+      <h3>Poe</h3>
+      <p>پلتفرم آزمایشی برای چت‌بات‌های هوش مصنوعی مختلف</p>
+      <button onclick="window.open('https://poe.com/', '_blank')">شروع چت</button>
+    </div>
+
   </div>
-
-  <!-- دسته طراحی لوگو -->
-  <div class="category">
-    <div class="category-header" onclick="toggleCategory(this)">🎨 طراحی لوگو با هوش مصنوعی</div>
-    <div class="category-content">
-
-      <div class="tool-card">
-        <img src="your-logo-path/wix.png" alt="Wix Logo Maker">
-        <div>
-          <h3>Wix Logo Maker</h3>
-          <p>طراحی سریع و حرفه‌ای لوگو با سوالات هوشمند و نسخه گفتگو محور</p>
-        </div>
-        <button onclick="window.open('https://www.wix.com/logo/maker', '_blank')">شروع طراحی</button>
-      </div>
-
-      <div class="tool-card">
-        <img src="your-logo-path/canva.png" alt="Canva">
-        <div>
-          <h3>Canva</h3>
-          <p>طراحی لوگو با قالب‌های آماده و دستیار هوش مصنوعی Magic Write</p>
-        </div>
-        <button onclick="window.open('https://www.canva.com/logo-maker/', '_blank')">شروع طراحی</button>
-      </div>
-
-      <div class="tool-card">
-        <img src="your-logo-path/looka.png" alt="Looka">
-        <div>
-          <h3>Looka</h3>
-          <p>طراحی لوگو لوکس و حرفه‌ای با خروجی قابل استفاده در برندینگ کامل</p>
-        </div>
-        <button onclick="window.open('https://looka.com/', '_blank')">شروع طراحی</button>
-      </div>
-
-      <div class="tool-card">
-        <img src="your-logo-path/logoai.png" alt="LogoAI">
-        <div>
-          <h3>LogoAI</h3>
-          <p>لوگوساز رایگان با خروجی برداری و امکانات سفارشی‌سازی کامل</p>
-        </div>
-        <button onclick="window.open('https://logoai.ai/fa', '_blank')">شروع طراحی</button>
-      </div>
-
-      <div class="tool-card">
-        <img src="your-logo-path/tailorbrands.png" alt="Tailor Brands">
-        <div>
-          <h3>Tailor Brands</h3>
-          <p>طراحی لوگو برای استارتاپ‌ها با سبک‌های متنوع و برندینگ کامل</p>
-        </div>
-        <button onclick="window.open('https://www.tailorbrands.com/logo-maker', '_blank')">شروع طراحی</button>
-      </div>
-
-      <div class="tool-card">
-        <img src="your-logo-path/designhill.png" alt="DesignHill">
-        <div>
-          <h3>DesignHill</h3>
-          <p>ایده‌پردازی و تولید طرح‌های متعدد با هوش مصنوعی و طراحان واقعی</p>
-        </div>
-        <button onclick="window.open('https://www.designhill.com/tools/logo-maker', '_blank')">شروع طراحی</button>
-      </div>
-
-      <div class="tool-card">
-        <img src="your-logo-path/brandmark.png" alt="Brandmark">
-        <div>
-          <h3>Brandmark</h3>
-          <p>طراحی لوگو حرفه‌ای برای برندهای بزرگ با خروجی باکیفیت بالا</p>
-        </div>
-        <button onclick="window.open('https://brandmark.io/', '_blank')">شروع طراحی</button>
-      </div>
-
-      <div class="tool-card">
-        <img src="your-logo-path/logo-com.png" alt="Logo.com">
-        <div>
-          <h3>Logo.com</h3>
-          <p>طراحی سریع و کاربردی لوگو با رابط کاربری ساده و خروجی رایگان</p>
-        </div>
+</div>
