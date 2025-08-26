@@ -1,3 +1,4 @@
+// لیست ابزارهای طراحی لوگو با هوش مصنوعی
 const logoTools = [
   {
     name: "Canva",
@@ -37,6 +38,7 @@ const logoTools = [
   }
 ];
 
+// تابع برای رندر کردن ابزارها در دسته‌بندی لوگو
 function renderLogoTools(containerId) {
   const container = document.getElementById(containerId);
   container.innerHTML = "";
