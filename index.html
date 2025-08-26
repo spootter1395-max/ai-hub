@@ -3,29 +3,99 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>ابزارهای هوش مصنوعی</title>
+  <title>مرکز ابزارهای هوش مصنوعی</title>
   <link rel="stylesheet" href="style.css">
-  <script src="logo.js" defer></script>
+  <style>
+    body {
+      font-family: sans-serif;
+      background: #f9f9f9;
+      padding: 20px;
+      direction: rtl;
+    }
+    .main-title {
+      font-size: 24px;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+    .welcome {
+      margin-bottom: 20px;
+      color: #555;
+    }
+    .menu-item {
+      background: #e0e0e0;
+      padding: 10px;
+      margin-top: 10px;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+    .submenu {
+      display: none;
+      padding: 10px;
+      background: #fff;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+    .submenu ul {
+      list-style: none;
+      padding: 0;
+    }
+    .submenu li {
+      margin: 5px 0;
+    }
+    .submenu a {
+      text-decoration: none;
+      color: #0077cc;
+    }
+  </style>
 </head>
 <body>
-  <header>
-    <h1>🎨 ابزارهای طراحی لوگو با هوش مصنوعی</h1>
-    <p>بهترین ابزارهای آنلاین برای ساخت لوگو حرفه‌ای با کمک هوش مصنوعی</p>
-  </header>
 
-  <main>
-    <section id="logo-tools" class="tool-section">
-      <!-- ابزارها اینجا لود می‌شن -->
-    </section>
-  </main>
+  <div class="main-title">مرکز ابزارهای هوش مصنوعی</div>
+  <p class="welcome">به دنیای ابزارهای هوش مصنوعی خوش آمدید 🤖🎨</p>
 
-  <footer>
-    <p>ساخته شده با ❤️ توسط سید</p>
-  </footer>
+  <div class="menu-list">
+
+    <!-- دسته‌بندی چت‌بات‌ها -->
+    <div class="menu-item" onclick="toggleMenu(this)">
+      🤖 چت‌بات‌ها
+    </div>
+    <div class="submenu" id="chatbot-tools">
+      <!-- ابزارهای چت‌بات -->
+      <ul>
+        <li><a href="https://chat.openai.com" target="_blank">ChatGPT</a></li>
+        <li><a href="https://bard.google.com" target="_blank">Google Bard</a></li>
+        <li><a href="https://poe.com" target="_blank">Poe</a></li>
+      </ul>
+    </div>
+
+    <!-- دسته‌بندی طراحی لوگو -->
+    <div class="menu-item" onclick="toggleMenu(this)">
+      🎨 طراحی لوگو
+    </div>
+    <div class="submenu" id="logo-tools">
+      <!-- ابزارهای طراحی لوگو -->
+      <ul>
+        <li><a href="https://looka.com" target="_blank">Looka</a></li>
+        <li><a href="https://logoai.com" target="_blank">LogoAI</a></li>
+        <li><a href="https://brandmark.io" target="_blank">Brandmark</a></li>
+      </ul>
+    </div>
+
+  </div>
 
   <script>
-    // فراخوانی تابع برای رندر کردن ابزارهای لوگو
-    renderLogoTools("logo-tools");
+    function toggleMenu(element) {
+      const allSubmenus = document.querySelectorAll('.submenu');
+      allSubmenus.forEach(sub => {
+        if (sub !== element.nextElementSibling) {
+          sub.style.display = 'none';
+        }
+      });
+
+      const submenu = element.nextElementSibling;
+      submenu.style.display = submenu.style.display === 'block' ? 'none' : 'block';
+    }
   </script>
+
 </body>
 </html>
