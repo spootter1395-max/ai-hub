@@ -3,16 +3,73 @@
 <head>
   <meta charset="UTF-8">
   <title>مرکز ابزارهای هوش مصنوعی</title>
-  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      font-family: Vazir, sans-serif;
+      direction: rtl;
+      background-color: #f9f9f9;
+      padding: 20px;
+      text-align: center;
+    }
+    button {
+      margin: 10px;
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+    #content {
+      margin-top: 30px;
+      text-align: right;
+    }
+    a {
+      color: blue;
+      text-decoration: none;
+    }
+  </style>
 </head>
 <body>
   <h1>مرکز ابزارهای هوش مصنوعی</h1>
-  <button onclick="startChat()">چت‌بات</button>
+
+  <button onclick="loadChatbot()">چت‌بات</button>
   <button onclick="loadTools()">ابزارها</button>
 
   <div id="content"></div>
 
-  <script src="chatbot.js"></script>
-  <script src="tools.js"></script>
+  <script>
+    function loadChatbot() {
+      fetch('ai-hub/chatbots.html')
+        .then(response => response.text())
+        .then(html => {
+          document.getElementById('content').innerHTML = html;
+        })
+        .catch(error => {
+          document.getElementById('content').innerHTML = '<p>خطا در بارگذاری چت‌بات.</p>';
+          console.error(error);
+        });
+    }
+
+    function loadTools() {
+      fetch('ai-hub/tools.json')
+        .then(response => response.json())
+        .then(tools => {
+          const content = document.getElementById('content');
+          content.innerHTML = '<h2>ابزارهای هوش مصنوعی</h2><ul>';
+          tools.forEach(tool => {
+            content.innerHTML += `
+              <li>
+                <strong>${tool.name}</strong> (${tool.category})<br>
+                ${tool.description}<br>
+                <a href="${tool.link}" target="_blank">مشاهده ابزار</a>
+              </li><br>
+            `;
+          });
+          content.innerHTML += '</ul>';
+        })
+        .catch(error => {
+          document.getElementById('content').innerHTML = '<p>خطا در بارگذاری ابزارها.</p>';
+          console.error(error);
+        });
+    }
+  </script>
 </body>
 </html>
