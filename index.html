@@ -1,4 +1,18 @@
-<script type="module">
-  import { renderChatbots } from './assets/js/chatbots.js';
-  document.getElementById("categories").innerHTML += renderChatbots();
-</script>
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+  <meta charset="UTF-8">
+  <title>مرکز ابزارهای هوش مصنوعی</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>مرکز ابزارهای هوش مصنوعی</h1>
+  <button onclick="startChat()">چت‌بات</button>
+  <button onclick="loadTools()">ابزارها</button>
+
+  <div id="content"></div>
+
+  <script src="chatbot.js"></script>
+  <script src="tools.js"></script>
+</body>
+</html>
