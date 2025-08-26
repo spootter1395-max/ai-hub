@@ -1,106 +1,34 @@
-<!-- دسته چت‌بات‌ها -->
-<div class="category">
-  <div class="category-header" onclick="toggleCategory(this)">💬 چت‌بات‌های هوش مصنوعی</div>
-  <div class="category-content">
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+  <meta charset="UTF-8">
+  <title>مرجع ابزارهای هوش مصنوعی</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
 
-    <div class="tool-card">
-      <img src="your-logo-path/copilot.png" alt="Copilot">
-      <h3>Microsoft Copilot</h3>
-      <p>دستیار هوشمند مایکروسافت با قابلیت تولید محتوا، تصویر، صدا و تحلیل فایل</p>
-      <button onclick="window.open('https://copilot.microsoft.com/', '_blank')">شروع گفتگو</button>
-    </div>
-
-    <div class="tool-card">
-      <img src="your-logo-path/chatgpt.png" alt="ChatGPT">
-      <h3>ChatGPT</h3>
-      <p>چت‌بات قدرتمند از OpenAI با توانایی پاسخ‌گویی، برنامه‌نویسی و خلاقیت</p>
-      <button onclick="window.open('https://chat.openai.com/', '_blank')">شروع گفتگو</button>
-    </div>
-
-    <div class="tool-card">
-      <img src="your-logo-path/gemini.png" alt="Gemini">
-      <h3>Gemini</h3>
-      <p>دستیار هوش مصنوعی گوگل با ادغام در جیمیل، Docs و جستجو</p>
-      <button onclick="window.open('https://gemini.google.com/', '_blank')">شروع گفتگو</button>
-    </div>
-
-    <div class="tool-card">
-      <img src="your-logo-path/claude.png" alt="Claude">
-      <h3>Claude</h3>
-      <p>چت‌بات اخلاق‌محور از Anthropic با تمرکز بر امنیت و دقت بالا</p>
-      <button onclick="window.open('https://claude.ai/', '_blank')">شروع گفتگو</button>
-    </div>
-
-    <div class="tool-card">
-      <img src="your-logo-path/pi.png" alt="Pi">
-      <h3>Pi</h3>
-      <p>چت‌بات شخصی با تمرکز بر گفت‌وگوی احساسی و همراهی روزمره</p>
-      <button onclick="window.open('https://heypi.com/', '_blank')">شروع گفتگو</button>
-    </div>
-
+  <div id="main-container">
+    <!-- اینجا دسته‌ها بارگذاری می‌شن -->
+    <div id="categories"></div>
   </div>
-</div>
 
-<!-- دسته طراحی لوگو -->
-<div class="category">
-  <div class="category-header" onclick="toggleCategory(this)">🎨 طراحی لوگو با هوش مصنوعی</div>
-  <div class="category-content">
+  <script>
+    // بارگذاری دسته‌ها به صورت جداگانه
+    async function loadCategory(file) {
+      const res = await fetch(file);
+      const html = await res.text();
+      document.getElementById("categories").innerHTML += html;
+    }
 
-    <div class="tool-card">
-      <img src="your-logo-path/wix.png" alt="Wix Logo Maker">
-      <h3>Wix Logo Maker</h3>
-      <p>طراحی سریع و حرفه‌ای لوگو با سوالات هوشمند و نسخه گفتگو محور</p>
-      <button onclick="window.open('https://www.wix.com/logo/maker', '_blank')">شروع طراحی</button>
-    </div>
+    // لیست دسته‌ها
+    const categoryFiles = [
+      "chatbots.html",
+      "logo-tools.html"
+      // بعداً می‌تونی اضافه کنی: "image-tools.html", "voice-tools.html", ...
+    ];
 
-    <div class="tool-card">
-      <img src="your-logo-path/canva.png" alt="Canva">
-      <h3>Canva</h3>
-      <p>طراحی لوگو با قالب‌های آماده و دستیار هوش مصنوعی Magic Write</p>
-      <button onclick="window.open('https://www.canva.com/logo-maker/', '_blank')">شروع طراحی</button>
-    </div>
+    categoryFiles.forEach(loadCategory);
+  </script>
 
-    <div class="tool-card">
-      <img src="your-logo-path/looka.png" alt="Looka">
-      <h3>Looka</h3>
-      <p>طراحی لوگو لوکس و حرفه‌ای با خروجی قابل استفاده در برندینگ کامل</p>
-      <button onclick="window.open('https://looka.com/', '_blank')">شروع طراحی</button>
-    </div>
-
-    <div class="tool-card">
-      <img src="your-logo-path/logoai.png" alt="LogoAI">
-      <h3>LogoAI</h3>
-      <p>لوگوساز رایگان با خروجی برداری و امکانات سفارشی‌سازی کامل</p>
-      <button onclick="window.open('https://logoai.ai/fa', '_blank')">شروع طراحی</button>
-    </div>
-
-    <div class="tool-card">
-      <img src="your-logo-path/tailorbrands.png" alt="Tailor Brands">
-      <h3>Tailor Brands</h3>
-      <p>طراحی لوگو برای استارتاپ‌ها با سبک‌های متنوع و برندینگ کامل</p>
-      <button onclick="window.open('https://www.tailorbrands.com/logo-maker', '_blank')">شروع طراحی</button>
-    </div>
-
-    <div class="tool-card">
-      <img src="your-logo-path/designhill.png" alt="DesignHill">
-      <h3>DesignHill</h3>
-      <p>ایده‌پردازی و تولید طرح‌های متعدد با هوش مصنوعی و طراحان واقعی</p>
-      <button onclick="window.open('https://www.designhill.com/tools/logo-maker', '_blank')">شروع طراحی</button>
-    </div>
-
-    <div class="tool-card">
-      <img src="your-logo-path/brandmark.png" alt="Brandmark">
-      <h3>Brandmark</h3>
-      <p>طراحی لوگو حرفه‌ای برای برندهای بزرگ با خروجی باکیفیت بالا</p>
-      <button onclick="window.open('https://brandmark.io/', '_blank')">شروع طراحی</button>
-    </div>
-
-    <div class="tool-card">
-      <img src="your-logo-path/logo-com.png" alt="Logo.com">
-      <h3>Logo.com</h3>
-      <p>طراحی سریع و کاربردی لوگو با رابط کاربری ساده و خروجی رایگان</p>
-      <button onclick="window.open('https://logo.com/', '_blank')">شروع طراحی</button>
-    </div>
-
-  </div>
-</div>
+</body>
+</html>
