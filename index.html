@@ -10,7 +10,7 @@
       margin: 0;
       padding: 0;
       direction: rtl;
-      text-align: center;
+      background-color: #f5f5f5;
       transition: background-color 1s ease;
     }
     header {
@@ -18,25 +18,34 @@
       color: #fff;
       padding: 20px;
       font-size: 1.6em;
+      text-align: center;
     }
-    .menu {
+    nav {
       display: flex;
       flex-direction: column;
       gap: 10px;
       margin: 20px;
     }
-    .menu button {
-      padding: 12px 20px;
-      font-size: 1em;
-      border: none;
-      border-radius: 8px;
+    .category {
       background-color: #4caf50;
       color: white;
+      padding: 12px;
+      border-radius: 8px;
       cursor: pointer;
-      transition: background 0.3s;
+      font-weight: bold;
     }
-    .menu button:hover {
-      background-color: #388e3c;
+    .tools {
+      display: none;
+      background-color: #e8f5e9;
+      padding: 10px;
+      border-radius: 8px;
+      margin-top: 5px;
+    }
+    .tools a {
+      display: block;
+      margin: 5px 0;
+      color: #333;
+      text-decoration: none;
     }
     .card {
       background-color: #fff;
@@ -49,6 +58,7 @@
       font-size: 1em;
       line-height: 1.8;
       color: #333;
+      text-align: center;
     }
     #music-btn {
       margin: 20px auto;
@@ -59,6 +69,7 @@
       border-radius: 8px;
       cursor: pointer;
       font-size: 1em;
+      display: block;
     }
     footer {
       margin-top: 40px;
@@ -66,6 +77,7 @@
       background: #f0f0f0;
       font-size: 0.9em;
       color: #444;
+      text-align: center;
     }
     footer img {
       width: 90px;
@@ -80,37 +92,71 @@
     به دنیای ابزارهای هوشمند خوش آمدید ☀️
   </header>
 
-  <div class="menu">
-    <button onclick="alert('در حال بارگذاری چت‌بات‌ها...')">چت‌بات‌ها 🤖</button>
-    <button onclick="alert('در حال بارگذاری ابزار طراحی لوگو...')">طراحی لوگو 🎨</button>
-  </div>
+  <nav>
+    <div class="category" onclick="toggleTools('chatbots')">🤖 چت‌بات‌ها</div>
+    <div class="tools" id="chatbots">
+      <a href="#">ChatGPT فارسی</a>
+      <a href="#">پاسخ‌گوی خودکار واتساپ</a>
+      <a href="#">بات تلگرام با API</a>
+    </div>
+
+    <div class="category" onclick="toggleTools('logos')">🎨 طراحی لوگو</div>
+    <div class="tools" id="logos">
+      <a href="#">لوگوساز هوشمند</a>
+      <a href="#">تبدیل متن به لوگو</a>
+      <a href="#">لوگوهای آماده قابل ویرایش</a>
+    </div>
+
+    <div class="category" onclick="toggleTools('images')">🖼️ ابزارهای تصویر</div>
+    <div class="tools" id="images">
+      <a href="#">تبدیل عکس به نقاشی</a>
+      <a href="#">حذف پس‌زمینه</a>
+      <a href="#">ساخت بنر تبلیغاتی</a>
+    </div>
+
+    <div class="category" onclick="toggleTools('data')">📊 ابزارهای داده</div>
+    <div class="tools" id="data">
+      <a href="#">تحلیل JSON</a>
+      <a href="#">تبدیل CSV به نمودار</a>
+      <a href="#">استخراج داده از متن</a>
+    </div>
+  </nav>
 
   <div class="card">
-    تهیه شده در گروه تحقیقاتی دکتر سیگنال<br>
+    تهیه شده در گروه تحقیقاتی آذرخش<br>
     آدرس: ساخت انواع بات و ربات در پیام‌رسان‌ها و شبکه‌های اجتماعی<br>
     تلفن: 09154353956<br>
     ارتباط با دکتر سیگنال در کانال تلگرام
   </div>
 
-  <button id="music-btn" onclick="toggleMusic()">🎵 پخش موسیقی</button>
-  <audio id="bg-music" src="music.mp3" loop></audio>
+  <button id="music-btn">🎵 پخش موسیقی</button>
+  <audio id="bg-music" src="Ahange%20Yaram%20Be%20Yek%20%5BSevilMusic%5D.mp3" loop></audio>
 
   <footer>
-    <img src="copilot_image_1756075652738.jpeg" alt="لوگوی آذرخش"><br>
+    <img src="copilot_image_17560705652738.jpeg" alt="لوگوی آذرخش"><br>
     <strong>گروه تحقیقاتی آذرخش</strong><br>
     دارنده اولین مقام بین‌المللی هوش مصنوعی در استان<br>
     <img src="https://trustseal.enamad.ir/logo.aspx" alt="نماد اعتماد الکترونیکی">
   </footer>
 
   <script>
-    function toggleMusic() {
-      const music = document.getElementById('bg-music');
+    function toggleTools(id) {
+      const el = document.getElementById(id);
+      el.style.display = el.style.display === 'block' ? 'none' : 'block';
+    }
+
+    const music = document.getElementById('bg-music');
+    const musicBtn = document.getElementById('music-btn');
+
+    musicBtn.addEventListener('click', () => {
       if (music.paused) {
-        music.play();
+        music.play().catch(() => {
+          alert("مرورگر اجازه پخش خودکار نمی‌دهد. لطفاً روی دکمه کلیک کنید.");
+        });
       } else {
         music.pause();
       }
-    }
+    });
 
     const colors = ['#f0f8ff', '#fff3e0', '#e8f5e9', '#fce4ec', '#e1f5fe'];
     let index = 0;
