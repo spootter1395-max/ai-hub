@@ -6,201 +6,119 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <style>
     body {
-      font-family: sans-serif;
-      padding: 20px;
+      font-family: 'Tahoma', sans-serif;
+      margin: 0;
+      padding: 0;
       direction: rtl;
+      text-align: center;
       transition: background-color 1s ease;
     }
-    .main-title {
-      font-size: 24px;
-      font-weight: bold;
-      margin-bottom: 10px;
+    header {
+      background-color: #222;
+      color: #fff;
+      padding: 20px;
+      font-size: 1.6em;
     }
-    .welcome {
-      margin-bottom: 20px;
-      color: #555;
+    .menu {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      margin: 20px;
     }
-    .menu-item {
-      background: #e0e0e0;
-      padding: 10px;
-      margin-top: 10px;
-      cursor: pointer;
-      border-radius: 5px;
-    }
-    .submenu {
-      display: none;
-      padding: 10px;
-      background: #fff;
-      border: 1px solid #ccc;
-      border-radius: 5px;
-    }
-    .tool-card {
-      background: #fefefe;
-      border: 1px solid #ddd;
+    .menu button {
+      padding: 12px 20px;
+      font-size: 1em;
+      border: none;
       border-radius: 8px;
-      padding: 10px;
-      margin: 10px 0;
-      text-align: center;
+      background-color: #4caf50;
+      color: white;
+      cursor: pointer;
+      transition: background 0.3s;
     }
-    .tool-card img {
-      width: 40px;
-      height: 40px;
-      margin-bottom: 5px;
+    .menu button:hover {
+      background-color: #388e3c;
     }
-    .tool-card h3 {
-      margin: 5px 0;
+    .card {
+      background-color: #fff;
+      margin: 20px auto;
+      padding: 20px;
+      width: 90%;
+      max-width: 500px;
+      border-radius: 12px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      font-size: 1em;
+      line-height: 1.8;
+      color: #333;
     }
-    .tool-card p {
-      font-size: 13px;
-      color: #666;
-    }
-    .tool-card button {
-      margin-top: 8px;
-      padding: 6px 12px;
-      background: #0077cc;
+    #music-btn {
+      margin: 20px auto;
+      padding: 10px 20px;
+      background-color: #2196f3;
       color: white;
       border: none;
-      border-radius: 5px;
+      border-radius: 8px;
       cursor: pointer;
+      font-size: 1em;
     }
     footer {
       margin-top: 40px;
       padding: 20px;
       background: #f0f0f0;
-      border-radius: 10px;
-      text-align: center;
-      font-size: 14px;
-      color: #333;
+      font-size: 0.9em;
+      color: #444;
     }
     footer img {
       width: 90px;
       margin: 10px auto;
     }
-    .music-button {
-      margin: 10px 0;
-      padding: 8px 16px;
-      background: #0077cc;
-      color: white;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-    }
   </style>
 </head>
 <body>
 
-  <div class="main-title">مرکز ابزارهای هوش مصنوعی</div>
-  <p class="welcome">به دنیای ابزارهای هوشمند خوش آمدید 🌟</p>
+  <header>
+    مرکز ابزارهای هوش مصنوعی<br>
+    به دنیای ابزارهای هوشمند خوش آمدید ☀️
+  </header>
 
-  <button class="music-button" onclick="document.getElementById('bg-music').play()">🎵 پخش موسیقی</button>
-
-  <div class="menu-list">
-
-    <!-- دسته‌بندی چت‌بات‌ها -->
-    <div class="menu-item" onclick="toggleMenu(this)">
-      🤖 چت‌بات‌ها
-    </div>
-    <div class="submenu">
-
-      <div class="tool-card">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/0/04/OpenAI_Logo.svg" alt="ChatGPT">
-        <h3>ChatGPT</h3>
-        <p>چت‌باتی هوشمند برای پاسخ‌گویی از OpenAI</p>
-        <button onclick="window.open('https://chat.openai.com/', '_blank')">استفاده کن</button>
-      </div>
-
-      <div class="tool-card">
-        <img src="https://copilot.microsoft.com/favicon.ico" alt="Copilot">
-        <h3>Copilot</h3>
-        <p>چت‌باتی هوشمند مایکروسافتی برای کدنویسی، نوشتن و تصویر</p>
-        <button onclick="window.open('https://copilot.microsoft.com/', '_blank')">استفاده کن</button>
-      </div>
-
-      <div class="tool-card">
-        <img src="https://chat.deepseek.com/favicon.ico" alt="DeepSeek">
-        <h3>DeepSeek</h3>
-        <p>چت‌بات فارسی‌زبان برای تحلیل و جست‌وجوی داده‌ها</p>
-        <button onclick="window.open('https://chat.deepseek.com/', '_blank')">استفاده کن</button>
-      </div>
-
-      <div class="tool-card">
-        <img src="https://mistral.ai/favicon.ico" alt="Le Chat Mistral">
-        <h3>Le Chat Mistral</h3>
-        <p>چت‌باتی هوشمند و سبک برای مکالمات روزمره</p>
-        <button onclick="window.open('https://chat.mistral.ai/', '_blank')">استفاده کن</button>
-      </div>
-
-      <div class="tool-card">
-        <img src="https://grok.x.ai/favicon.ico" alt="Grok">
-        <h3>Grok</h3>
-        <p>چت‌بات شبکه X برای تحلیل اخبار و گفتگوهای اجتماعی</p>
-        <button onclick="window.open('https://grok.x.ai/', '_blank')">استفاده کن</button>
-      </div>
-
-      <div class="tool-card">
-        <img src="https://poe.com/favicon.ico" alt="Poe">
-        <h3>Poe</h3>
-        <p>پلتفرم آزمایشی برای چت‌بات‌های هوش مصنوعی</p>
-        <button onclick="window.open('https://poe.com/', '_blank')">استفاده کن</button>
-      </div>
-
-    </div>
-
-    <!-- دسته‌بندی طراحی لوگو -->
-    <div class="menu-item" onclick="toggleMenu(this)">
-      🎨 طراحی لوگو
-    </div>
-    <div class="submenu" id="logo-tools">
-      <div class="tool-card">
-        <img src="https://looka.com/favicon.ico" alt="Looka">
-        <h3>Looka</h3>
-        <p>طراحی لوگو حرفه‌ای با هوش مصنوعی</p>
-        <button onclick="window.open('https://looka.com/', '_blank')">استفاده کن</button>
-      </div>
-      <div class="tool-card">
-        <img src="https://logoai.com/favicon.ico" alt="LogoAI">
-        <h3>LogoAI</h3>
-        <p>ساخت لوگو با الگوریتم‌های هوشمند</p>
-        <button onclick="window.open('https://logoai.com/', '_blank')">استفاده کن</button>
-      </div>
-      <div class="tool-card">
-        <img src="https://brandmark.io/favicon.ico" alt="Brandmark">
-        <h3>Brandmark</h3>
-        <p>طراحی برند و لوگو با هوش مصنوعی</p>
-        <button onclick="window.open('https://brandmark.io/', '_blank')">استفاده کن</button>
-      </div>
-    </div>
-
+  <div class="menu">
+    <button onclick="alert('در حال بارگذاری چت‌بات‌ها...')">چت‌بات‌ها 🤖</button>
+    <button onclick="alert('در حال بارگذاری ابزار طراحی لوگو...')">طراحی لوگو 🎨</button>
   </div>
 
-  <!-- موسیقی ملایم -->
-  <audio id="bg-music" loop>
-    <source src="https://cdn.pixabay.com/download/audio/2022/03/15/audio_7f3e2b3b7e.mp3?filename=relaxing-time-112191.mp3" type="audio/mpeg">
-    مرورگر شما از پخش صوت پشتیبانی نمی‌کند.
-  </audio>
+  <div class="card">
+    تهیه شده در گروه تحقیقاتی دکتر سیگنال<br>
+    آدرس: ساخت انواع بات و ربات در پیام‌رسان‌ها و شبکه‌های اجتماعی<br>
+    تلفن: 09154353956<br>
+    ارتباط با دکتر سیگنال در کانال تلگرام
+  </div>
 
-  <!-- امضا و نماد اعتماد -->
+  <button id="music-btn" onclick="toggleMusic()">🎵 پخش موسیقی</button>
+  <audio id="bg-music" src="music.mp3" loop></audio>
+
   <footer>
-    <img src="copilot_image_1756075652738.jpeg" alt="لوگوی آذرخش">
-    <strong>تهیه شده در گروه تحقیقاتی آذرخش</strong><br>
-    سیدمجتبی قیامی<br>
-    <span dir="ltr">09154353956</span><br>
-    ساخت انواع ربات، اپلیکیشن، تریدر، کانال سیگنال<br>
-    دارنده اولین مقام بین‌المللی هوش مصنوعی در استان<br><br>
+    <img src="copilot_image_1756075652738.jpeg" alt="لوگوی آذرخش"><br>
+    <strong>گروه تحقیقاتی آذرخش</strong><br>
+    دارنده اولین مقام بین‌المللی هوش مصنوعی در استان<br>
     <img src="https://trustseal.enamad.ir/logo.aspx" alt="نماد اعتماد الکترونیکی">
   </footer>
 
   <script>
-    function toggleMenu(element) {
-      const allSubmenus = document.querySelectorAll('.submenu');
-      allSubmenus.forEach(sub => {
-        if (sub !== element.nextElementSibling) {
-          sub.style.display = 'none';
-        }
-      });
-      const submenu = element.nextElementSibling;
-      submenu.style.display = submenu.style.display === 'block' ? 'none' : 'block';
+    function toggleMusic() {
+      const music = document.getElementById('bg-music');
+      if (music.paused) {
+        music.play();
+      } else {
+        music.pause();
+      }
     }
 
-    // تغییر رنگ پس‌زمینه هر چند ثانیه
-    const colors = ["#f9f9
+    const colors = ['#f0f8ff', '#fff3e0', '#e8f5e9', '#fce4ec', '#e1f5fe'];
+    let index = 0;
+    setInterval(() => {
+      document.body.style.backgroundColor = colors[index];
+      index = (index + 1) % colors.length;
+    }, 5000);
+  </script>
+
+</body>
+</html>
