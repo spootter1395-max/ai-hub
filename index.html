@@ -1,61 +1,214 @@
 <!DOCTYPE html>
 <html lang="fa">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>مرکز ابزارهای هوش مصنوعی فارسی</title>
-  <link rel="manifest" href="manifest.json" />
-  <link rel="stylesheet" href="styles.css" />
-  <meta name="theme-color" content="#222" />
+  <meta charset="UTF-8">
+  <title>مرکز ابزارهای هوش مصنوعی</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="manifest" href="manifest.json">
+  <style>
+    body {
+      font-family: 'Tahoma', sans-serif;
+      margin: 0;
+      padding: 0;
+      direction: rtl;
+      background-color: #f5f5f5;
+      transition: background-color 1s ease;
+    }
+    header {
+      background-color: #222;
+      color: #fff;
+      padding: 20px;
+      font-size: 1.6em;
+      text-align: center;
+    }
+    header img {
+      width: 80px;
+      border-radius: 12px;
+      margin-bottom: 10px;
+    }
+    nav {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      margin: 20px;
+    }
+    .category {
+      background-color: #4caf50;
+      color: white;
+      padding: 12px;
+      border-radius: 8px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+    .tools {
+      display: none;
+      background-color: #e8f5e9;
+      padding: 10px;
+      border-radius: 8px;
+      margin-top: 5px;
+    }
+    .tools a {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin: 8px 0;
+      padding: 10px;
+      background: #fff;
+      border-radius: 8px;
+      text-decoration: none;
+      color: #333;
+      box-shadow: 0 0 5px rgba(0,0,0,0.1);
+    }
+    .tools a:hover {
+      background-color: #e0f7fa;
+    }
+    .icon {
+      width: 24px;
+      height: 24px;
+    }
+    .card {
+      background-color: #fff;
+      margin: 20px auto;
+      padding: 20px;
+      width: 90%;
+      max-width: 500px;
+      border-radius: 12px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      font-size: 1em;
+      line-height: 1.8;
+      color: #333;
+      text-align: center;
+    }
+    #music-btn {
+      margin: 20px auto;
+      padding: 10px 20px;
+      background-color: #2196f3;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 1em;
+      display: block;
+    }
+    footer {
+      margin-top: 40px;
+      padding: 20px;
+      background: #f0f0f0;
+      font-size: 0.9em;
+      color: #444;
+      text-align: center;
+    }
+    footer img {
+      width: 90px;
+      margin: 10px auto;
+    }
+  </style>
 </head>
 <body>
+
   <header>
-    <h1>🎯 ابزارهای هوش مصنوعی فارسی</h1>
-    <p>ابزارهای کاربردی برای طراحی، متن، تصویر و گفتگو</p>
+    <img src="copilot_image_1756070366796.jpeg" alt="لوگوی آذرخش">
+    مرکز ابزارهای هوش مصنوعی<br>
+    به دنیای ابزارهای هوشمند خوش آمدید ☀️
   </header>
 
-  <main>
-    <section id="tools-container">
-      <h2>🧠 ابزارها</h2>
-      <div id="tools-grid">در حال بارگذاری ابزارها...</div>
-    </section>
-  </main>
+  <nav>
+    <div class="category" onclick="toggleTools('chatbots')">🤖 چت‌بات‌ها</div>
+    <div class="tools" id="chatbots">
+      <a href="https://chat.openai.com" target="_blank">
+        <img src="images/chatgpt-icon.png" class="icon"> ChatGPT فارسی
+      </a>
+      <a href="https://wa.me/989154353956?text=سلام" target="_blank">
+        <img src="images/whatsapp-icon.png" class="icon"> پاسخ‌گوی خودکار واتساپ
+      </a>
+      <a href="https://t.me/yourbot" target="_blank">
+        <img src="images/telegram-icon.png" class="icon"> بات تلگرام با API
+      </a>
+    </div>
+
+    <div class="category" onclick="toggleTools('logos')">🎨 طراحی لوگو</div>
+    <div class="tools" id="logos">
+      <a href="https://looka.com" target="_blank">
+        <img src="images/looka-icon.png" class="icon"> لوگوساز هوشمند
+      </a>
+      <a href="https://www.canva.com/logo-maker/" target="_blank">
+        <img src="images/canva-icon.png" class="icon"> تبدیل متن به لوگو
+      </a>
+      <a href="https://www.freepik.com/free-logos" target="_blank">
+        <img src="images/freepik-icon.png" class="icon"> لوگوهای آماده قابل ویرایش
+      </a>
+    </div>
+
+    <div class="category" onclick="toggleTools('images')">🖼️ ابزارهای تصویر</div>
+    <div class="tools" id="images">
+      <a href="https://picsart.com" target="_blank">
+        <img src="images/picsart-icon.png" class="icon"> تبدیل عکس به نقاشی
+      </a>
+      <a href="https://www.remove.bg" target="_blank">
+        <img src="images/removebg-icon.png" class="icon"> حذف پس‌زمینه
+      </a>
+      <a href="https://www.crello.com/create/banner/" target="_blank">
+        <img src="images/crello-icon.png" class="icon"> ساخت بنر تبلیغاتی
+      </a>
+    </div>
+
+    <div class="category" onclick="toggleTools('data')">📊 ابزارهای داده</div>
+    <div class="tools" id="data">
+      <a href="https://jsonformatter.org/json-parser" target="_blank">
+        <img src="images/json-icon.png" class="icon"> تحلیل JSON
+      </a>
+      <a href="https://www.chartgo.com/" target="_blank">
+        <img src="images/chartgo-icon.png" class="icon"> تبدیل CSV به نمودار
+      </a>
+      <a href="https://extracttable.com/" target="_blank">
+        <img src="images/extracttable-icon.png" class="icon"> استخراج داده از متن
+      </a>
+    </div>
+  </nav>
+
+  <div class="card">
+    تهیه شده در گروه تحقیقاتی آذرخش<br>
+    آدرس: ساخت انواع بات و ربات در پیام‌رسان‌ها و شبکه‌های اجتماعی<br>
+    تلفن: 09154353956<br>
+    ارتباط با دکتر سیگنال در کانال تلگرام
+  </div>
+
+  <button id="music-btn">🎵 پخش موسیقی</button>
+  <audio id="bg-music" src="Ahange%20Yaram%20Be%20Yek%20%5BSevilMusic%5D.mp3" loop></audio>
 
   <footer>
-    <p>ساخته شده توسط سید | نسخه آفلاین فعال ✅</p>
+    <img src="copilot_image_1756070366796.jpeg" alt="لوگوی آذرخش"><br>
+    <strong>گروه تحقیقاتی آذرخش</strong><br>
+    دارنده اولین مقام بین‌المللی هوش مصنوعی در استان<br>
+    <img src="https://trustseal.enamad.ir/logo.aspx" alt="نماد اعتماد الکترونیکی">
   </footer>
 
-  <!-- ثبت Service Worker -->
   <script>
-    if ('serviceWorker' in navigator) {
-      navigator.serviceWorker.register('sw.js')
-        .then(() => console.log('✅ Service Worker ثبت شد'))
-        .catch(err => console.error('❌ خطا در ثبت Service Worker:', err));
+    function toggleTools(id) {
+      const el = document.getElementById(id);
+      el.style.display = el.style.display === 'block' ? 'none' : 'block';
     }
+
+    const music = document.getElementById('bg-music');
+    const musicBtn = document.getElementById('music-btn');
+
+    musicBtn.addEventListener('click', () => {
+      if (music.paused) {
+        music.play().catch(() => {
+          alert("مرورگر اجازه پخش خودکار نمی‌دهد. لطفاً روی دکمه کلیک کنید.");
+        });
+      } else {
+        music.pause();
+      }
+    });
+
+    const colors = ['#f0f8ff', '#fff3e0', '#e8f5e9', '#fce4ec', '#e1f5fe'];
+    let index = 0;
+    setInterval(() => {
+      document.body.style.backgroundColor = colors[index];
+      index = (index + 1) % colors.length;
+    }, 5000);
   </script>
 
-  <!-- بارگذاری ابزارها از فایل JSON -->
-  <script>
-    fetch('tools.json')
-      .then(response => response.json())
-      .then(data => {
-        const grid = document.getElementById('tools-grid');
-        grid.innerHTML = '';
-        data.tools.forEach(tool => {
-          const card = document.createElement('div');
-          card.className = 'tool-card';
-          card.innerHTML = `
-            <h3>${tool.name}</h3>
-            <p>${tool.description}</p>
-            <a href="${tool.link}" target="_blank">ورود به ابزار</a>
-          `;
-          grid.appendChild(card);
-        });
-      })
-      .catch(err => {
-        document.getElementById('tools-grid').innerText = '❌ خطا در بارگذاری ابزارها';
-        console.error('خطا در بارگذاری JSON:', err);
-      });
-  </script>
 </body>
 </html>
