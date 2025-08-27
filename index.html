@@ -42,10 +42,23 @@
       margin-top: 5px;
     }
     .tools a {
-      display: block;
-      margin: 5px 0;
-      color: #333;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin: 8px 0;
+      padding: 10px;
+      background: #fff;
+      border-radius: 8px;
       text-decoration: none;
+      color: #333;
+      box-shadow: 0 0 5px rgba(0,0,0,0.1);
+    }
+    .tools a:hover {
+      background-color: #e0f7fa;
+    }
+    .icon {
+      width: 24px;
+      height: 24px;
     }
     .card {
       background-color: #fff;
@@ -95,30 +108,54 @@
   <nav>
     <div class="category" onclick="toggleTools('chatbots')">🤖 چت‌بات‌ها</div>
     <div class="tools" id="chatbots">
-      <a href="#">ChatGPT فارسی</a>
-      <a href="#">پاسخ‌گوی خودکار واتساپ</a>
-      <a href="#">بات تلگرام با API</a>
+      <a href="https://chat.openai.com" target="_blank">
+        <img src="images/chatgpt-icon.png" class="icon"> ChatGPT فارسی
+      </a>
+      <a href="https://wa.me/989154353956?text=سلام" target="_blank">
+        <img src="images/whatsapp-icon.png" class="icon"> پاسخ‌گوی خودکار واتساپ
+      </a>
+      <a href="https://t.me/yourbot" target="_blank">
+        <img src="images/telegram-icon.png" class="icon"> بات تلگرام با API
+      </a>
     </div>
 
     <div class="category" onclick="toggleTools('logos')">🎨 طراحی لوگو</div>
     <div class="tools" id="logos">
-      <a href="#">لوگوساز هوشمند</a>
-      <a href="#">تبدیل متن به لوگو</a>
-      <a href="#">لوگوهای آماده قابل ویرایش</a>
+      <a href="https://looka.com" target="_blank">
+        <img src="images/looka-icon.png" class="icon"> لوگوساز هوشمند
+      </a>
+      <a href="https://www.canva.com/logo-maker/" target="_blank">
+        <img src="images/canva-icon.png" class="icon"> تبدیل متن به لوگو
+      </a>
+      <a href="https://www.freepik.com/free-logos" target="_blank">
+        <img src="images/freepik-icon.png" class="icon"> لوگوهای آماده قابل ویرایش
+      </a>
     </div>
 
     <div class="category" onclick="toggleTools('images')">🖼️ ابزارهای تصویر</div>
     <div class="tools" id="images">
-      <a href="#">تبدیل عکس به نقاشی</a>
-      <a href="#">حذف پس‌زمینه</a>
-      <a href="#">ساخت بنر تبلیغاتی</a>
+      <a href="https://picsart.com" target="_blank">
+        <img src="images/picsart-icon.png" class="icon"> تبدیل عکس به نقاشی
+      </a>
+      <a href="https://www.remove.bg" target="_blank">
+        <img src="images/removebg-icon.png" class="icon"> حذف پس‌زمینه
+      </a>
+      <a href="https://www.crello.com/create/banner/" target="_blank">
+        <img src="images/crello-icon.png" class="icon"> ساخت بنر تبلیغاتی
+      </a>
     </div>
 
     <div class="category" onclick="toggleTools('data')">📊 ابزارهای داده</div>
     <div class="tools" id="data">
-      <a href="#">تحلیل JSON</a>
-      <a href="#">تبدیل CSV به نمودار</a>
-      <a href="#">استخراج داده از متن</a>
+      <a href="https://jsonformatter.org/json-parser" target="_blank">
+        <img src="images/json-icon.png" class="icon"> تحلیل JSON
+      </a>
+      <a href="https://www.chartgo.com/" target="_blank">
+        <img src="images/chartgo-icon.png" class="icon"> تبدیل CSV به نمودار
+      </a>
+      <a href="https://extracttable.com/" target="_blank">
+        <img src="images/extracttable-icon.png" class="icon"> استخراج داده از متن
+      </a>
     </div>
   </nav>
 
