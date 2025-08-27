@@ -1,41 +1,32 @@
-const CACHE_NAME = 'aihub-cache-v1';
+const CACHE_NAME = 'ai-hub-cache-v1';
 const urlsToCache = [
   '/',
   '/index.html',
   '/manifest.json',
-  '/icons/icon-192.png',
-  '/icons/icon-512.png'
+  '/Ahange Yaram Be Yek [SevilMusic].mp3',
+  '/copilot_image_1756070366796.jpeg',
+  '/images/chatgpt-icon.png',
+  '/images/whatsapp-icon.png',
+  '/images/telegram-icon.png',
+  '/images/looka-icon.png',
+  '/images/canva-icon.png',
+  '/images/freepik-icon.png',
+  '/images/picsart-icon.png',
+  '/images/removebg-icon.png',
+  '/images/crello-icon.png',
+  '/images/json-icon.png',
+  '/images/chartgo-icon.png',
+  '/images/extracttable-icon.png'
 ];
 
-// نصب سرویس‌ورکر و کش کردن فایل‌ها
 self.addEventListener('install', event => {
   event.waitUntil(
-    caches.open(CACHE_NAME).then(cache => {
-      return cache.addAll(urlsToCache);
-    })
+    caches.open(CACHE_NAME).then(cache => cache.addAll(urlsToCache))
   );
 });
 
-// فعال‌سازی و پاک‌سازی کش‌های قدیمی
-self.addEventListener('activate', event => {
-  event.waitUntil(
-    caches.keys().then(cacheNames =>
-      Promise.all(
-        cacheNames.map(name => {
-          if (name !== CACHE_NAME) {
-            return caches.delete(name);
-          }
-        })
-      )
-    )
-  );
-});
-
-// هندل کردن درخواست‌ها
 self.addEventListener('fetch', event => {
   event.respondWith(
-    caches.match(event.request).then(response => {
-      return response || fetch(event.request);
-    })
+    caches.match(event.request).then(response => response || fetch(event.request))
   );
 });
